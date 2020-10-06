@@ -53,6 +53,6 @@ module.exports = {
             lang: 'zh-CN',
         }
     },
-    base: '/blog/'
-    // base: '/'
+    // base: '/blog/'
+    base: '/'
 }

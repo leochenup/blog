@@ -2,6 +2,15 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: bold !important;
 }
 
+.sidebar, .sidebar-mask {
+    z-index: 13;
+}
+
+#my-gitalk-container {
+    padding: 0 1rem !important;
+    max-width: 860px !important;
+}
+
 .content__default pre, .content__default pre[class*='language-'] {
     padding: 0.75rem 1rem !important;
 }
@@ -81,11 +90,6 @@ html.dark {
 }
 
 html.dark {
-    #my-gitalk-container {
-        padding: 0 1rem !important;
-        max-width: 860px !important;
-    }
-
     .content__default code {
         color: #aaaaaa;
         padding: 0.2em 0.3em;
@@ -317,6 +321,28 @@ html.light {
                 cursor: pointer;
             }
         }
+    }
+
+    .markdown-body .highlight pre, .markdown-body pre {
+        background-color: #f5f2f0 !important;
+    }
+
+    .gt-btn-login {
+        background-color: #3eaf7c !important;
+        border: 1px solid #3eaf7c !important;
+        color: #ffffff !important;
+    }
+
+    .gt-btn-preview {
+        background-color: #fff !important;
+        border: 1px solid #3eaf7c !important;
+        color: #3eaf7c !important;
+    }
+
+    .gt-btn-public {
+        background-color: #3eaf7c !important;
+        border: 1px solid #3eaf7c !important;
+        color: #ffffff !important;
     }
 }
 

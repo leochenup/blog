@@ -17,7 +17,7 @@ module.exports = {
         nav: navConfig,
 
 
-        repo: 'leochenup/newblog',
+        repo: 'leochenup/blog',
         repoLabel: 'GitHub',
         docsDir: 'docs',
         editLinks: true,

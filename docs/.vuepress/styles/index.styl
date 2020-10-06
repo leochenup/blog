@@ -42,7 +42,7 @@ div[class*='language-'] {
     fill: #3eaf7c !important;
 }
 
-.gt-ico-tip svg {
+.gt-ico-tip svg, .gt-ico-edit svg {
     fill: #3eaf7c !important;
 }
 
@@ -81,6 +81,11 @@ html.dark {
 }
 
 html.dark {
+    #my-gitalk-container {
+        padding: 0 1rem !important;
+        max-width: 860px !important;
+    }
+
     .content__default code {
         color: #aaaaaa;
         padding: 0.2em 0.3em;
@@ -129,6 +134,51 @@ html.dark {
         }
 
         .gt-header {
+            .markdown-body {
+                background-color: #1a1a1a !important;
+                color: #aaaaaa !important;
+
+                .highlight pre, pre {
+                    background-color: #2d2d2d !important;
+                }
+
+                .pl-smi, .pl-s .pl-s1 {
+                    color: orange !important;
+                }
+
+                .pl-s1 {
+                    color: #3eaf7c !important;
+                }
+
+                .pl-kos {
+                    color: #aaaaaa !important;
+                }
+
+                .pl-c1, .pl-en {
+                    color: orange !important;
+                }
+
+                h1, h2 {
+                    border-bottom: 1px solid #333 !important;
+                }
+
+                hr {
+                    background-color: #333;
+                }
+
+                table tr {
+                    background-color: #1a1a1a !important;
+                }
+
+                table th, table td {
+                    border: 1px solid #333 !important;
+                }
+
+                .pl-pds, .pl-s, .pl-s .pl-pse .pl-s1, .pl-sr, .pl-sr .pl-cce, .pl-sr .pl-sra, .pl-sr .pl-sre {
+                    color: #3eaf7c;
+                }
+            }
+
             .gt-avatar-github {
                 svg {
                     fill: #777 !important;
@@ -144,11 +194,17 @@ html.dark {
                     color: #aaaaaa !important;
                 }
 
-                .gt-header-textarea:hover {
+                .gt-header-textarea:focus {
                     background-color: #2a2a2a !important;
                 }
 
                 .gt-header-controls {
+                    .gt-btn-public {
+                        background-color: #3eaf7c !important;
+                        border: 1px solid #333 !important;
+                        color: #333 !important;
+                    }
+
                     .gt-ico-tip {
                         svg {
                             fill: #3eaf7c !important;
@@ -204,6 +260,10 @@ html.dark {
 
                 table th, table td {
                     border: 1px solid #333 !important;
+                }
+
+                .pl-pds, .pl-s, .pl-s .pl-pse .pl-s1, .pl-sr, .pl-sr .pl-cce, .pl-sr .pl-sra, .pl-sr .pl-sre {
+                    color: #3eaf7c;
                 }
             }
 

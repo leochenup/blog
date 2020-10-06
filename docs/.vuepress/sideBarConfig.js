@@ -38,7 +38,7 @@ let webappconfig = [
         title: 'TypeScript',
         collapsable: true,
         children: [
-            '/frontend/typescript/'
+            '/frontend/typescript/2020-10-6-TypeScript 声明文件'
         ]
     },
     {

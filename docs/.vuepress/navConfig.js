@@ -8,7 +8,7 @@ module.exports = [
                 items: [
                     { text: 'Styles', link: '/frontend/styles/css/2020-1-21-CSS三大特性' },
                     { text: 'JavaScript', link: '/frontend/javascript/js2' },
-                    { text: 'TypeScript', link: '/frontend/typescript/' },
+                    { text: 'TypeScript', link: '/frontend/typescript/2020-10-6-TypeScript 声明文件' },
                     { text: 'BootStrap', link: '/frontend/bootstrap/' },
                     { text: 'Vue', link: '/frontend/vue/2020-5-30-vue常用特性' },
                     { text: 'React', link: '/frontend/react/2020-9-29-React 表单处理' },

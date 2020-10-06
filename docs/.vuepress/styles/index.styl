@@ -1,0 +1,323 @@
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold !important;
+}
+
+.content__default pre, .content__default pre[class*='language-'] {
+    padding: 0.75rem 1rem !important;
+}
+
+.content__default:not(.custom) {
+    padding: 2rem 1rem !important;
+}
+
+div[class*='language-'] {
+    border-radius: 0px !important;
+}
+
+.markdown-body h1 {
+    display: block;
+}
+
+.gitalk-container {
+    margin: 0 auto;
+    max-width: 48rem;
+    padding: 0 1rem !important;
+    overflow-x: scroll !important;
+}
+
+.gt-container a {
+    color: #3eaf7c !important;
+}
+
+.gt-container .gt-link {
+    border-bottom: 1px dotted #3eaf7c !important;
+}
+
+.page-nav .inner {
+    color: #3eaf7c;
+    display: flex;
+}
+
+.gt-ico-reply .gt-svg svg {
+    fill: #3eaf7c !important;
+}
+
+.gt-ico-tip svg {
+    fill: #3eaf7c !important;
+}
+
+.page-nav .inner span.prev {
+    margin-right: 10px;
+    padding-left: 10px;
+    padding: 10px 0 10px 50px;
+}
+
+.page-nav .inner span.next {
+    margin-left: 10px;
+    text-align: end;
+    padding-right: 10px;
+    padding: 10px 50px 10px 0;
+}
+
+html.dark {
+    --default-color-10: rgba(0, 0, 0, 1);
+    --default-color-9: rgba(0, 0, 0, 0.9);
+    --default-color-8: rgba(0, 0, 0, 0.8);
+    --default-color-7: rgba(0, 0, 0, 0.7);
+    --default-color-6: rgba(0, 0, 0, 0.6);
+    --default-color-5: rgba(0, 0, 0, 0.5);
+    --default-color-4: rgba(0, 0, 0, 0.4);
+    --default-color-3: rgba(0, 0, 0, 0.3);
+    --default-color-2: rgba(0, 0, 0, 0.2);
+    --default-color-1: rgba(0, 0, 0, 0.1);
+    --background-color: #222 !important;
+    --box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.6);
+    --box-shadow-hover: 0 2px 16px 0 rgba(0, 0, 0, 0.7);
+    --text-color: #aaaaaa !important;
+    --text-color-sub: #8B8B8B;
+    --border-color: #333 !important;
+    --code-color: #333 !important;
+    --mask-color: #000;
+}
+
+html.dark {
+    .content__default code {
+        color: #aaaaaa;
+        padding: 0.2em 0.3em;
+    }
+
+    div[class*='language-'] {
+        background-color: #2d2d2d;
+    }
+
+    .page-nav {
+        padding: 0 1rem !important;
+
+        .inner {
+            border-top: 1px solid #333;
+
+            .prev, .next {
+                flex: 1;
+                background: #333;
+                cursor: pointer;
+            }
+        }
+    }
+
+    // gitalk 样式修改
+    .gt-container {
+        // padding: 0 !important;
+        .gt-meta {
+            border-bottom: 1px solid #333;
+
+            .gt-popup {
+                background: #1a1a1a;
+                border: 1px solid #333;
+
+                .gt-copyright {
+                    border-top: 1px solid #333;
+                }
+            }
+
+            .gt-user {
+                .gt-ico-arrdown {
+                    svg {
+                        fill: #3eaf7c !important;
+                    }
+                }
+            }
+        }
+
+        .gt-header {
+            .gt-avatar-github {
+                svg {
+                    fill: #777 !important;
+                }
+            }
+
+            .gt-header-comment {
+                .gt-header-textarea {
+                    background-color: #1a1a1a !important;
+                    border: 1px solid #333 !important;
+                    caret-color: #3eaf7c !important;
+                    font-family: '-apple-system', 'BlinkMacSystemFont', 'Hiragino Sans GB', 'Roboto', 'Segoe UI', 'Microsoft Yahei', '微软雅黑', 'Oxygen-Sans', 'Ubuntu', 'Cantarell', 'Helvetica', 'Arial', 'STHeiti', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+                    color: #aaaaaa !important;
+                }
+
+                .gt-header-textarea:hover {
+                    background-color: #2a2a2a !important;
+                }
+
+                .gt-header-controls {
+                    .gt-ico-tip {
+                        svg {
+                            fill: #3eaf7c !important;
+                        }
+                    }
+
+                    .gt-btn-preview {
+                        background-color: #333 !important;
+                        border: 1px solid #333 !important;
+                        color: #3eaf7c !important;
+                    }
+
+                    .gt-btn-login {
+                        background-color: #3eaf7c !important;
+                        border: 1px solid #333 !important;
+                        color: #333 !important;
+                    }
+                }
+            }
+        }
+
+        .gt-comments {
+            .markdown-body {
+                color: #aaaaaa !important;
+
+                .pl-smi, .pl-s .pl-s1 {
+                    color: orange !important;
+                }
+
+                .pl-s1 {
+                    color: #3eaf7c !important;
+                }
+
+                .pl-kos {
+                    color: #aaaaaa !important;
+                }
+
+                .pl-c1, .pl-en {
+                    color: orange !important;
+                }
+
+                h1, h2 {
+                    border-bottom: 1px solid #333 !important;
+                }
+
+                hr {
+                    background-color: #333;
+                }
+
+                table tr {
+                    background-color: #1a1a1a !important;
+                }
+
+                table th, table td {
+                    border: 1px solid #333 !important;
+                }
+            }
+
+            .gt-comment-content {
+                box-shadow: 0 0 !important;
+                background-color: #1a1a1a !important;
+
+                .highlight pre {
+                    background: #2d2d2d !important;
+                }
+            }
+        }
+    }
+}
+
+html.light {
+    div[class*='language-'] {
+        background-color: #f5f2f0;
+    }
+
+    .content__default pre code, .content__default pre[class*='language-'] code {
+        color: #000;
+    }
+
+    .token.selector, .token.important, .token.atrule, .token.keyword, .token.builtin {
+        color: #0077aa;
+    }
+
+    .token.punctuation {
+        color: #999;
+    }
+
+    .token.comment, .token.prolog, .token.doctype, .token.cdata {
+        color: slategray;
+    }
+
+    .token.string, .token.char, .token.attr-value, .token.regex, .token.variable {
+        color: #669900;
+    }
+
+    .token.operator, .token.entity, .token.url {
+        color: #9a6e3a;
+    }
+
+    // #f5f2f0
+    .page-nav {
+        .inner {
+            .prev, .next {
+                flex: 1;
+                background: #fafafa;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+@media (max-width: 1279px) {
+    .page {
+        padding-right: 0 !important;
+
+        .side-bar {
+            display: none !important;
+        }
+
+        .page-title {
+            padding: 0 1rem !important;
+        }
+
+        .page-edit {
+            .edit-link {
+                margin-bottom: 0.5rem !important;
+            }
+
+            .last-updated {
+                font-size: 0.8em !important;
+                float: none !important;
+                text-align: left !important;
+            }
+        }
+    }
+}
+
+@media (max-width: 1055px) {
+    .sidebar {
+        top: 0 !important;
+        padding-top: $navbarHeight !important;
+        transform: translateX(-100%) !important;
+        transition: transform 0.2s ease !important;
+    }
+
+    .page, .password-wrapper-in {
+        margin-left: 0 !important;
+    }
+
+    .theme-container {
+        &.sidebar-open {
+            .sidebar {
+                transform: translateX(0) !important;
+            }
+        }
+
+        &.no-navbar {
+            .sidebar {
+                padding-top: 0 !important;
+            }
+        }
+    }
+
+    .password-shadow {
+        padding-left: 0 !important;
+    }
+
+    .content__default:not(.custom) {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+}

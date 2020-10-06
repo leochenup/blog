@@ -1,0 +1,19 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@vuepress/plugin-medium-zoom": "^1.6.0",
+    "vuepress": "^1.6.0"
+  },
+  "dependencies": {
+    "blueimp-md5": "^2.18.0",
+    "gitalk": "^1.6.2",
+    "vuepress-theme-reco": "^1.5.7"
+  },
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
+  }
+}

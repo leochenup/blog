@@ -39,12 +39,8 @@ module.exports = {
         smoothScroll: true
     },
     head: [
-        ['link', { rel: 'icon', href: '/img/logo.png' }]
+        ['link', { rel: 'icon', href: '/img/logo.png' }],
         ['meta', { name: 'viewport', content: 'width=device-width,initial-scale=1,user-scalable=no' }],
-
-    ],
-
-    head: [
         ['link', { rel: 'manifest', href: '/manifest.json' }],
         ['meta', { name: 'theme-color', content: '#3eaf7c' }],
         ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],

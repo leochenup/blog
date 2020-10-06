@@ -5,6 +5,7 @@
   "license": "MIT",
   "devDependencies": {
     "@vuepress/plugin-medium-zoom": "^1.6.0",
+    "@vuepress/plugin-pwa": "^1.6.0",
     "vuepress": "^1.6.0",
     "vuepress-plugin-mygitalk": "^1.0.5"
   },

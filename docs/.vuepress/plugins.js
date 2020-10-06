@@ -27,4 +27,8 @@ module.exports = [
         options: {
         }
     }],
+    ['@vuepress/pwa', {
+        serviceWorker: true,
+        updatePopup: true
+    }]
 ]

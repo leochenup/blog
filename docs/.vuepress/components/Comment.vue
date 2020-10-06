@@ -9,7 +9,6 @@ import md5 from "blueimp-md5";
 import "gitalk/dist/gitalk.css";
 import Gitalk from "gitalk";
 
-console.log(md5, location.pathname);
 
 export default {
   name: "Comment",
@@ -20,7 +19,7 @@ export default {
       repo: "blog",
       owner: "leochenup",
       admin: ["leochenup"],
-      id: md5(location.pathname),
+      id: md5(location?.pathname),
     };
     const gitalk = new Gitalk(commentConfig);
     gitalk.render("gitalk-container");

@@ -1,6 +1,6 @@
 ---
 title: "TypeScript声明文件"
-date: 2020-02-07
+date: 2020-10-06
 sidebar: 'auto'
 categories:
 - FrontEnd
@@ -17,20 +17,22 @@ tags:
 
 由于本章涉及大量新语法，故在本章开头列出新语法的索引，方便大家在使用这些新语法时能快速查找到对应的讲解：
 
-* [`declare var`](https://ts.xcatliu.com/basics/declaration-files.html#declare-var) 声明全局变量
-* [`declare function`](https://ts.xcatliu.com/basics/declaration-files.html#declare-function) 声明全局方法
-* [`declare class`](https://ts.xcatliu.com/basics/declaration-files.html#declare-class) 声明全局类
-* [`declare enum`](https://ts.xcatliu.com/basics/declaration-files.html#declare-enum) 声明全局枚举类型
-* [`declare namespace`](https://ts.xcatliu.com/basics/declaration-files.html#declare-namespace) 声明（含有子属性的）全局对象
-* [`interface` 和 `type`](https://ts.xcatliu.com/basics/declaration-files.html#interface-he-type) 声明全局类型
-* [`export`](https://ts.xcatliu.com/basics/declaration-files.html#export) 导出变量
-* [`export namespace`](https://ts.xcatliu.com/basics/declaration-files.html#export-namespace) 导出（含有子属性的）对象
-* [`export default`](https://ts.xcatliu.com/basics/declaration-files.html#export-default) ES6 默认导出
-* [`export =`](https://ts.xcatliu.com/basics/declaration-files.html#export-1) commonjs 导出模块
-* [`export as namespace`](https://ts.xcatliu.com/basics/declaration-files.html#export-as-namespace) UMD 库声明全局变量
-* [`declare global`](https://ts.xcatliu.com/basics/declaration-files.html#declare-global) 扩展全局变量
-* [`declare module`](https://ts.xcatliu.com/basics/declaration-files.html#declare-module) 扩展模块
-* [`/// <reference />`](https://ts.xcatliu.com/basics/declaration-files.html#san-xie-xian-zhi-ling) 三斜线指令
+* [`declare var`](/frontend/typescript/2020-10-6-TypeScript%20声明文件.html#declare-var) 声明全局变量
+* [`declare function`](/frontend/typescript/2020-10-6-TypeScript%20声明文件.html#declare-function) 声明全局方法
+* [`declare class`](/frontend/typescript/2020-10-6-TypeScript%20声明文件.html#declare-class) 声明全局类
+* [`declare enum`](/frontend/typescript/2020-10-6-TypeScript%20声明文件.html#declare-enum) 声明全局枚举类型
+* [`declare namespace`](/frontend/typescript/2020-10-6-TypeScript%20声明文件.html#declare-namespace) 声明（含有子属性的）全局对象
+* [`interface` 和 `type`](/frontend/typescript/2020-10-6-TypeScript%20声明文件.html#interface-he-type) 声明全局类型
+* [`export`](/frontend/typescript/2020-10-6-TypeScript%20声明文件.html#export) 导出变量
+* [`export namespace`](/frontend/typescript/2020-10-6-TypeScript%20声明文件.html#export-namespace) 导出（含有子属性的）对象
+* [`export default`](/frontend/typescript/2020-10-6-TypeScript%20声明文件.html#export-default) ES6 默认导出
+* [`export =`](/frontend/typescript/2020-10-6-TypeScript%20声明文件.html#export-1) commonjs 导出模块
+* [`export as namespace`](/frontend/typescript/2020-10-6-TypeScript%20声明文件.html#export-as-namespace) UMD 库声明全局变量
+* [`declare global`](/frontend/typescript/2020-10-6-TypeScript%20声明文件.html#declare-global) 扩展全局变量
+* [`declare module`](/frontend/typescript/2020-10-6-TypeScript%20声明文件.html#declare-module) 扩展模块
+* [`/// <reference />`](/frontend/typescript/2020-10-6-TypeScript%20声明文件.html#san-xie-xian-zhi-ling) 三斜线指令
+
+<!-- more -->
 
 ## 什么是声明语句
 

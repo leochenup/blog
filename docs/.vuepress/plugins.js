@@ -25,6 +25,7 @@ module.exports = [
     ['@vuepress/medium-zoom', {
         selector: '.theme-reco-content:not(a)>img',
         options: {
+            background: "#333"
         }
     }],
     ['@vuepress/pwa', {

@@ -11,6 +11,7 @@ cd docs/.vuepress/dist
 
 # 如果是发布到自定义域名
 echo 'docs.leochengo.top' > CNAME
+# echo 'leochengo.top' > CNAME
 
 git init
 git add -A

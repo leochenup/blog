@@ -81,7 +81,8 @@ let webappconfig = [
         title: 'Webpack',
         collapsable: true,
         children: [
-            '/frontend/webpack/2020-9-10-基础'
+            '/frontend/webpack/2020-9-10-基础',
+            '/frontend/webpack/2020-10-08-webpack css 处理'
         ]
     },
     {

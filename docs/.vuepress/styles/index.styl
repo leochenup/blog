@@ -60,6 +60,10 @@ p, ul, ol {
     padding: 0.2em 0.3em !important;
 }
 
+.content__default pre[class*=language-] code, .content__default pre code {
+    color: #a5cee1 !important;
+}
+
 .sidebar, .sidebar-mask {
     z-index: 13;
 }
@@ -169,6 +173,7 @@ html.dark {
 
     .page-nav {
         padding: 0 1rem !important;
+        padding-top: 1rem !important;
 
         .inner {
             border-top: 1px solid #333;
@@ -390,6 +395,8 @@ html.light {
 
     // #f5f2f0
     .page-nav {
+        padding: 0 1rem !important;
+
         .inner {
             .prev, .next {
                 flex: 1;

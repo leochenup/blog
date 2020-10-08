@@ -12,7 +12,7 @@ module.exports = [
                     { text: 'BootStrap', link: '/frontend/bootstrap/' },
                     { text: 'Vue', link: '/frontend/vue/2020-5-30-vue常用特性' },
                     { text: 'React', link: '/frontend/react/2020-9-29-React 表单处理' },
-                    { text: 'WebPack', link: '/frontend/webpack/2020-9-10-基础' },
+                    { text: 'WebPack', link: '/frontend/webpack/2020-10-9-开发环境' },
                 ]
             },
             {

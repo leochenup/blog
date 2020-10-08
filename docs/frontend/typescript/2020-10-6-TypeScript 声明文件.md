@@ -1,5 +1,5 @@
 ---
-title: "TypeScript声明文件"
+title: "声明文件"
 date: 2020-10-06
 sidebar: 'auto'
 categories:

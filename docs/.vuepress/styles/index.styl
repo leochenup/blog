@@ -21,8 +21,8 @@ a {
 
 .blog-list, .abstract-wrapper {
     code {
-        color: #5050 5;
-        padding: 0.2em 0.3em;
+       
+        padding: 0.2em 0.3em ;
         margin: 0;
         font-size: 0.85em;
         background-color: var(--code-color);
@@ -31,23 +31,13 @@ a {
 
     routerlink {
         code {
-            color: #3eaf7c;
-            padding: 0.2em 0.3em;
-            margin: 0;
-            font-size: 0.85em;
-            background-color: var(--code-color);
-            border-radius: 3px;
+            color: #3eaf7c !important;
         }
     }
 
     a {
         code {
-            color: #3eaf7c;
-            padding: 0.2em 0.3em;
-            margin: 0;
-            font-size: 0.85em;
-            background-color: var(--code-color);
-            border-radius: 3px;
+            color: #3eaf7c !important;
         }
     }
 }
@@ -360,6 +350,12 @@ html.dark {
 }
 
 html.light {
+    .blog-list, .abstract-wrapper {
+        code {
+            color: #505050 !important;
+        }
+    }
+
     body {
         color: #333 !important;
     }

@@ -1,8 +1,29 @@
+.jilu-checkbox {
+    user-select: none;
+    cursor: pointer;
+}
+
+.zhailu-outer {
+    background-color: #f5f2f0;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+.zhailu-p {
+}
+
+.zhailu-author {
+    text-align: end;
+    color: #3eaf7c;
+    font-style: oblique;
+}
+
 input[type=checkbox] {
     position: relative;
     margin-right: 15px;
     margin-bottom: 10px;
-    visibility hidden;
+    visibility: hidden;
 }
 
 input[type=checkbox]:after {
@@ -17,14 +38,14 @@ input[type=checkbox]:after {
     visibility: visible;
     padding: 0px 3px;
     border-radius: 5px;
-    border: 2px solid
+    border: 2px solid;
 }
 
 input[type=checkbox]:checked:after {
     content: '✔';
     font-size: 12px;
     text-align: center;
-    line-height :17px;
+    line-height: 17px;
 }
 
 strong {
@@ -183,6 +204,10 @@ html.dark {
 }
 
 html.dark {
+    .zhailu-outer {
+        background-color: #2d2d2d !important;
+    }
+
     .content__default pre[class*=language-] code, .content__default pre code {
         color: #a5cee1 !important;
     }

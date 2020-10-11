@@ -12,7 +12,7 @@ module.exports = {
     themeConfig: {
         lastUpdated: '最后更新日期',
         //全局作者设置
-        author: 'reco_luan',
+        author: 'Galloping_Leo',
         // 博客配置
         nav: navConfig,
 

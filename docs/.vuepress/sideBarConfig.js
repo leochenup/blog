@@ -35,6 +35,8 @@ let webappconfig = [
             '/frontend/javascript/2020-1-29-code-clean',
             '/frontend/javascript/2020-2-20-formData',
             '/frontend/javascript/2020-9-29-防抖',
+            '/frontend/javascript/2020-10-10-Object.defineProperty()',
+            '/frontend/javascript/2020-10-10-Symbol',
         ]
     },
     {

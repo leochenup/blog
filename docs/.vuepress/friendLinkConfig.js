@@ -19,4 +19,9 @@ module.exports = [
         desc: 'Accelerated JavaScript animation.',
         link: 'https://github.com/julianshapiro/velocity'
     },
+    {
+        title: 'Create React App 中文文档',
+        desc: 'Create React App 中文文档,通过运行一个命令来建立现代Web应用程序。',
+        link: 'https://www.html.cn/create-react-app/'
+    },
 ]

@@ -14,4 +14,9 @@ module.exports = [
         desc: 'TypeScript中文网 · TypeScript——JavaScript的超集',
         link: 'https://www.tslang.cn/docs/home.html'
     },
+    {
+        title: 'velocity.js',
+        desc: 'Accelerated JavaScript animation.',
+        link: 'https://github.com/julianshapiro/velocity'
+    },
 ]

@@ -25,6 +25,11 @@ module.exports = [
         link: 'https://www.html.cn/create-react-app/'
     },
     {
+        title: 'Emotion',
+        desc: '👩‍🎤 CSS-in-JS library designed for high performance style composition',
+        link: 'https://emotion.sh/docs/introduction'
+    },
+    {
         title: 'Reach Router',
         desc: 'Reach Router is a small, simple router for React that borrows from React Router, Ember, and Preact Router. Reach Router has a small footprint, supports only simple route patterns by design, and has strong (but experimental) accessibility features.',
         link: 'https://reach.tech/router/'

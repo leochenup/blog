@@ -25,7 +25,7 @@ module.exports = [
         link: 'https://www.html.cn/create-react-app/'
     },
     {
-        title: 'Create React App --- Original English text',
+        title: 'Create React App Original',
         desc: 'Set up a modern web app by running one command.',
         link: 'https://create-react-app.dev/docs/setting-up-your-editor'
     },

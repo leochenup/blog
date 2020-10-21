@@ -25,6 +25,11 @@ module.exports = [
         link: 'https://www.html.cn/create-react-app/'
     },
     {
+        title: 'Create React App --- Original English text',
+        desc: 'Set up a modern web app by running one command.',
+        link: 'https://create-react-app.dev/docs/setting-up-your-editor'
+    },
+    {
         title: 'Emotion',
         desc: '👩‍🎤 CSS-in-JS library designed for high performance style composition',
         link: 'https://emotion.sh/docs/introduction'

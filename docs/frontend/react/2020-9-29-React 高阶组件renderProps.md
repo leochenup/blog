@@ -110,9 +110,9 @@ const withMouse = (WrappedComponent) => {
 
 实现输入框自动从 `localStorage` 中获取数据 `key`，把 key 作为参数向服务器发送请求得到 key 的中文翻译值，Ï并作为 `defaultValue` 填充到 `input` 中显示。
 
-`withAjax.js` 文件
 
-::: details 点击查看代码
+
+::: details withAjax.js 文件
 
 ```jsx
 import React from 'react';
@@ -146,9 +146,9 @@ export default withAjax
 
 :::
 
-`withLocal.js` 文件
 
-::: details 点击查看代码
+
+::: details withLocal.js 文件
 
 ```jsx
 import React from 'react';
@@ -178,9 +178,9 @@ export default withLocal
 
 :::
 
-`Button.js` 文件
 
-::: details 点击查看代码
+
+::: details Button.js 文件
 
 ```jsx
 import React from 'react';
@@ -256,9 +256,9 @@ export default Button
 
 :::
 
-`Input.js` 文件
 
-::: details 点击查看代码
+
+::: details Input.js 文件
 
 ```jsx
 import React from 'react';
@@ -324,9 +324,9 @@ export default Input
 
 :::
 
-`App.js` 文件
 
-::: details 点击查看代码
+
+::: details App.js 文件
 
 ```jsx
 import React from 'react';

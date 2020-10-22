@@ -7,7 +7,7 @@ module.exports = {
     title: 'Leo`s TechStack',
     description: '前端 后端 软件开发 ....',
     logo: '/img/logo.png',
-    // markdown: { lineNumbers: true },
+    markdown: { lineNumbers: true },
     theme: 'reco',
     themeConfig: {
         lastUpdated: '最后更新日期',

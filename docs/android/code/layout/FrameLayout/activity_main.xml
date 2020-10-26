@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/box_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:width="320dp"
+        android:height="320dp"
+        android:background="#000" />
+
+    <TextView
+        android:id="@+id/box_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:width="280dp"
+        android:height="280dp"
+        android:background="#f5f6f5" />
+
+    <TextView
+        android:id="@+id/box_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:width="240dp"
+        android:height="240dp"
+        android:background="#000" />
+
+    <TextView
+        android:id="@+id/box_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:width="200dp"
+        android:height="200dp"
+        android:background="#f5f6f5" />
+
+    <TextView
+        android:id="@+id/box_5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:width="160dp"
+        android:height="160dp"
+        android:background="#000" />
+
+    <TextView
+        android:id="@+id/box_6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:width="120dp"
+        android:height="120dp"
+        android:background="#f5f6f5" />
+
+    <TextView
+        android:id="@+id/box_7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:width="80dp"
+        android:height="80dp"
+        android:background="#000" />
+
+    <TextView
+        android:id="@+id/box_8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:width="40dp"
+        android:height="40dp"
+        android:background="#fff" />
+
+
+</FrameLayout>

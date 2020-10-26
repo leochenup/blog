@@ -1,8 +1,15 @@
 // .content__default code {
 // /* padding: 0.2em 0.3em !important; */
 // }
-.demo-wrap .demo-code-content {
-    overflow: hidden !important;
+// .demo-wrap .demo-code-content {
+// overflow: hidden !important;
+// }
+.medium-zoom-image--opened {
+    margin-left: 0 !important;
+}
+
+.demo-wrap .demo-code .demo-code-content {
+    max-height: 600px !important;
 }
 
 .demo-wrap .demo-code-nav {
@@ -437,6 +444,10 @@ html.dark {
 }
 
 html.light {
+    .demo-wrap .demo-code {
+        background-color: #f5f2f0 !important;
+    }
+
     div[class*='language-']::before {
         color: #3eaf7c !important;
     }

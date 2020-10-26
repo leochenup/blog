@@ -184,7 +184,8 @@ let mobileappconfig = [
         title: 'Android',
         collapsable: true,
         children: [
-            '/android/'
+            '/android/',
+            '/android/2020-10-26-Android 布局管理'
         ]
     },
     {

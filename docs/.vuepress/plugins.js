@@ -26,6 +26,8 @@ module.exports = [
         selector: '.theme-reco-content:not(a)>img',
         options: {
             background: "#333",
+            marginLeft:'0',
+            transform:'translateX(0)'
         }
     }],
     ['@vuepress/pwa', {

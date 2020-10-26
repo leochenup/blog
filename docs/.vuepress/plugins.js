@@ -10,7 +10,7 @@ module.exports = [
                 // GitHub Application Client ID.
                 clientID: '35a6515726aebec085c1',
                 // GitHub Application Client Secret.
-                clientSecret: '2a3efbc04078af2a2019fd561b057b42f063ddd7',
+                clientSecret: '6642b39ac3bb1e802ff082032ebe693ee6980049',
                 // GitHub repository. 存储评论的 repo
                 repo: 'blog',
                 // GitHub repository 所有者，可以是个人或者组织。

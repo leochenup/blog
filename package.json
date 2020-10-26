@@ -10,6 +10,7 @@
     "vuepress-plugin-mygitalk": "^1.0.5"
   },
   "dependencies": {
+    "@vuepress-reco/vuepress-plugin-extract-code": "^1.0.4",
     "blueimp-md5": "^2.18.0",
     "vuepress-theme-reco": "^1.5.7"
   },

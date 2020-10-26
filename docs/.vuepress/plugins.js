@@ -31,5 +31,6 @@ module.exports = [
     ['@vuepress/pwa', {
         serviceWorker: true,
         updatePopup: true
-    }]
+    }],
+    ['@vuepress-reco/extract-code']
 ]

@@ -22,5 +22,8 @@ tags:
   <template slot="code-js">
     <<< @/docs/other/php/code/index.js
   </template>
+  <template slot="code-js">
+    <<< @/docs/other/php/code/test.js
+  </template>
 </RecoDemo>
 

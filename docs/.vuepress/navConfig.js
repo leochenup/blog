@@ -36,7 +36,7 @@ module.exports = [
     {
         text: 'Mobile App', link: '', icon: 'reco-category',
         items: [
-            { text: 'Android', link: '/android/' },
+            { text: 'Android', link: '/android/2020-10-26-Android 布局管理' },
             { text: 'React Native', link: '/reactnative/' },
             { text: 'Flutter', link: '/flutter/' },
         ]

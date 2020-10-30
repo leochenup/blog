@@ -21,19 +21,17 @@ tags:
 
 ```java
 public class MyClass implements InterfaceA {
- public static void main(String[] args){
- }
+  public static void main(String[] args){
+  }
 
- @Override
- public void saySomething() {
- // TODO Auto-generated method stub
- }
+  @Override
+  public void saySomething() {
+    // TODO Auto-generated method stub
+  }
 }
 
-
-
 interface InterfaceA{
- public void saySomething();
+  public void saySomething();
 }
 ```
 
@@ -43,22 +41,20 @@ interface InterfaceA{
 
 ```java
 public class MyClass implements InterfaceA {
- public static void main(String[] args){
- }
+  public static void main(String[] args){
+  }
 
- @Override
- public void saySomething() {
- // TODO Auto-generated method stub
- }
+  @Override
+  public void saySomething() {
+    // TODO Auto-generated method stub
+  }
 }
 
-
-
 interface InterfaceA{
- public void saySomething();
- default public void sayHi(){
- System.out.println("Hi");
- }
+  public void saySomething();
+  default public void sayHi(){
+    System.out.println("Hi");
+  }
 }
 ```
 
@@ -71,30 +67,28 @@ interface InterfaceA{
 
 ```java
 public class MyClass implements InterfaceA, InterfaceB {
- public static void main(String[] args){
- MyClass mc = new MyClass();
- mc.sayHi();
- }
+  public static void main(String[] args){
+    MyClass mc = new MyClass();
+    mc.sayHi();
+  }
 
- @Override
- public void saySomething() {
- // TODO Auto-generated method stub
- }
+  @Override
+  public void saySomething() {
+    // TODO Auto-generated method stub
+  }
 }
 
-
-
 interface InterfaceA{
- public void saySomething();
- default public void sayHi(){
- System.out.println("Hi from InterfaceA");
- }
+  public void saySomething();
+  default public void sayHi(){
+    System.out.println("Hi from InterfaceA");
+  }
 }
 
 interface InterfaceB{
- default public void sayHi(){
- System.out.println("Hi from InterfaceB");
- }
+  default public void sayHi(){
+    System.out.println("Hi from InterfaceB");
+  }
 }
 ```
 
@@ -108,33 +102,33 @@ interface InterfaceB{
 
 ```java
 public class MyClass implements InterfaceA, InterfaceB {
- public static void main(String[] args){
- MyClass mc = new MyClass();
- mc.sayHi();
- }
+  public static void main(String[] args){
+    MyClass mc = new MyClass();
+    mc.sayHi();
+  }
 
- @Override
- public void saySomething() {
- // TODO Auto-generated method stub
- }
+  @Override
+  public void saySomething() {
+    // TODO Auto-generated method stub
+  }
 
- @Override
- public void sayHi(){
- System.out.println("implemetation of sayHi() in MyClass");
- }
+  @Override
+  public void sayHi(){
+    System.out.println("implemetation of sayHi() in MyClass");
+  }
 }
 
 interface InterfaceA{
- public void saySomething();
- default public void sayHi(){
- System.out.println("Hi from InterfaceA");
- }
+  public void saySomething();
+  default public void sayHi(){
+    System.out.println("Hi from InterfaceA");
+  }
 }
 
 interface InterfaceB{
- default public void sayHi(){
- System.out.println("Hi from InterfaceB");
- }
+  default public void sayHi(){
+    System.out.println("Hi from InterfaceB");
+  }
 }
 ```
 
@@ -142,32 +136,32 @@ interface InterfaceB{
 
 ```java
 public class MyClass implements InterfaceA, InterfaceB {
- public static void main(String[] args){
- MyClass mc = new MyClass();
- mc.sayHi();
- }
+  public static void main(String[] args){
+    MyClass mc = new MyClass();
+    mc.sayHi();
+  }
 
- @Override
- public void saySomething() {
- // TODO Auto-generated method stub
- }
+  @Override
+  public void saySomething() {
+    // TODO Auto-generated method stub
+  }
 
- @Override
- public void sayHi(){
- InterfaceA.super.sayHi();
- }
+  @Override
+  public void sayHi(){
+    InterfaceA.super.sayHi();
+  }
 }
 
 interface InterfaceA{
- public void saySomething();
- default public void sayHi(){
- System.out.println("Hi from InterfaceA");
- }
+  public void saySomething();
+  default public void sayHi(){
+    System.out.println("Hi from InterfaceA");
+  }
 }
 
 interface InterfaceB{
- default public void sayHi(){
- System.out.println("Hi from InterfaceB");
- }
+  default public void sayHi(){
+    System.out.println("Hi from InterfaceB");
+  }
 }
 ```

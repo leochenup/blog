@@ -270,7 +270,9 @@ let otherconfig = [
             '/other/java/2020-9-8-Java 常用类',
             '/other/java/2020-9-8-Java 多线程',
             '/other/java/2020-9-8-Java 枚举类',
-            '/other/java/2020-10-30-java default'
+            '/other/java/2020-10-30-java default',
+            '/other/java/2020-10-30-java Collection',
+            '/other/java/2020-10-30-java Iterator',
         ]
     },
     {

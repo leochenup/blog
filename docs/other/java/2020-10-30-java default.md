@@ -18,6 +18,7 @@ tags:
 
 `Java 8` 新增了`default` 方法，它可以在接口添加新功能特性，而且还不影响接口的实现类。下面我们通过例子来说明这一点。
 
+<!-- more -->
 
 ```java
 public class MyClass implements InterfaceA {

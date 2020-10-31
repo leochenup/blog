@@ -29,6 +29,8 @@ tags:
 
 <img src="https://my-blog-leo.oss-cn-chengdu.aliyuncs.com/java_collection.png" width="500px" style="margin-left:50%; transform:translateX(-50%);"/>
 
+<!-- more -->
+
 ### Map 接口继承树
 
 <img src="https://my-blog-leo.oss-cn-chengdu.aliyuncs.com/java_map.png" width="500px" style="margin-left:50%; transform:translateX(-50%);"/>

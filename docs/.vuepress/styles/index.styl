@@ -4,6 +4,15 @@
 // .demo-wrap .demo-code-content {
 // overflow: hidden !important;
 // }
+.custom-block.details {
+    padding: 1rem 0rem 1rem 0 !important;
+}
+
+.custom-block.details summary {
+    margin-left: 1rem !important;
+    user-select: none;
+}
+
 .medium-zoom-image--opened {
     margin-left: 0 !important;
 }
@@ -216,6 +225,10 @@ html.dark {
 }
 
 html.dark {
+    td, th {
+        border: 1px solid #444 !important;
+    }
+
     div[class*='language-'].line-numbers-mode .line-numbers-wrapper {
         color: #aaaaaa !important;
     }

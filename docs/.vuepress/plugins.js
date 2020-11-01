@@ -8,9 +8,9 @@ module.exports = [
             // Gitalk配置
             gitalk: {
                 // GitHub Application Client ID.
-                clientID: '35a6515726aebec085c1',
+                clientID: 'ad575d90fe4c613b0565',
                 // GitHub Application Client Secret.
-                clientSecret: 'a15cffa0eb12d89c3f67aea39bf4b1468a968ad0',
+                clientSecret: '2436fa1c94d30417c6afada5359a8a62fcd68ce8',
                 // GitHub repository. 存储评论的 repo
                 repo: 'blog',
                 // GitHub repository 所有者，可以是个人或者组织。

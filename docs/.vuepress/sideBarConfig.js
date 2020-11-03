@@ -43,7 +43,7 @@ let webappconfig = [
         title: 'TypeScript',
         collapsable: true,
         children: [
-            '/frontend/typescript/2020-10-6-TypeScript 声明文件'
+            '/frontend/typescript/2020-10-6-TypeScript声明文件'
         ]
     },
     {
@@ -67,16 +67,16 @@ let webappconfig = [
         title: 'React',
         collapsable: true,
         children: [
-            '/frontend/react/2020-9-29-React 生命周期',
-            '/frontend/react/2020-9-29-React 组件',
-            '/frontend/react/2020-9-29-React 参数传递',
-            '/frontend/react/2020-9-29-React 表单处理',
-            '/frontend/react/2020-9-29-React 部分原理',
+            '/frontend/react/2020-9-29-React生命周期',
+            '/frontend/react/2020-9-29-React组件',
+            '/frontend/react/2020-9-29-React参数传递',
+            '/frontend/react/2020-9-29-React表单处理',
+            '/frontend/react/2020-9-29-React部分原理',
             '/frontend/react/2020-9-29-React路由',
-            '/frontend/react/2020-9-29-React 父组件给 props.children 组件传参',
-            '/frontend/react/2020-9-29-React 高阶组件renderProps',
-            '/frontend/react/2020-9-29-React 中 antD 按需加载',
-            '/frontend/react/2020-9-29-React 代码分割',
+            '/frontend/react/2020-9-29-React父组件给props.children组件传参',
+            '/frontend/react/2020-9-29-React高阶组件renderProps',
+            '/frontend/react/2020-9-29-React中antD按需加载',
+            '/frontend/react/2020-9-29-React代码分割',
         ]
     },
     {
@@ -88,7 +88,7 @@ let webappconfig = [
             '/frontend/webpack/2020-10-09-开发环境优化',
             '/frontend/webpack/2020-10-09-生产环境优化',
             '/frontend/webpack/2020-10-10-webpack详细配置',
-            '/frontend/webpack/2020-10-10-webpack5 部分内容',
+            '/frontend/webpack/2020-10-10-webpack5部分内容',
         ]
     },
     {
@@ -184,7 +184,7 @@ let mobileappconfig = [
         title: 'Android',
         collapsable: true,
         children: [
-            '/android/2020-10-26-Android 布局管理'
+            '/android/2020-10-26-Android布局管理'
         ]
     },
     {
@@ -267,12 +267,12 @@ let otherconfig = [
         collapsable: true,
         children: [
             '/other/java/2020-9-8-Java面向对象',
-            '/other/java/2020-9-8-Java 常用类',
-            '/other/java/2020-9-8-Java 多线程',
-            '/other/java/2020-9-8-Java 枚举类',
-            '/other/java/2020-10-30-java default',
-            '/other/java/2020-10-30-java Collection',
-            '/other/java/2020-10-30-java Iterator',
+            '/other/java/2020-9-8-Java常用类',
+            '/other/java/2020-9-8-Java多线程',
+            '/other/java/2020-9-8-Java枚举类',
+            '/other/java/2020-10-30-java-default',
+            '/other/java/2020-10-30-java-Collection',
+            '/other/java/2020-10-30-java-Iterator',
         ]
     },
     {
@@ -311,7 +311,7 @@ let otherconfig = [
         title: '错误日志',
         collapsable: true,
         children: [
-            '/记录/错误日志/2020-3-5-React Native Errors'
+            '/记录/错误日志/2020-3-5-React-Native-Errors'
         ]
     },
     {

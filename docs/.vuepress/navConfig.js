@@ -8,10 +8,10 @@ module.exports = [
                 items: [
                     { text: 'Styles', link: '/frontend/styles/css/2020-1-21-CSS三大特性' },
                     { text: 'JavaScript', link: '/frontend/javascript/js2' },
-                    { text: 'TypeScript', link: '/frontend/typescript/2020-10-6-TypeScript 声明文件' },
+                    { text: 'TypeScript', link: '/frontend/typescript/2020-10-6-TypeScript声明文件' },
                     { text: 'BootStrap', link: '/frontend/bootstrap/' },
                     { text: 'Vue', link: '/frontend/vue/2020-5-30-vue常用特性' },
-                    { text: 'React', link: '/frontend/react/2020-9-29-React 表单处理' },
+                    { text: 'React', link: '/frontend/react/2020-9-29-React生命周期' },
                     { text: 'WebPack', link: '/frontend/webpack/2020-10-9-开发环境' },
                 ]
             },
@@ -36,7 +36,7 @@ module.exports = [
     {
         text: 'Mobile App', link: '', icon: 'reco-category',
         items: [
-            { text: 'Android', link: '/android/2020-10-26-Android 布局管理' },
+            { text: 'Android', link: '/android/2020-10-26-Android布局管理' },
             { text: 'React Native', link: '/reactnative/' },
             { text: 'Flutter', link: '/flutter/' },
         ]
@@ -65,7 +65,7 @@ module.exports = [
                 text: '技术',
                 items: [
                     { text: 'c++', link: '/other/c/2020-9-8-C++基础' },
-                    { text: 'java', link: '/other/java/2020-9-8-Java 常用类' },
+                    { text: 'java', link: '/other/java/2020-9-8-Java面向对象' },
                     { text: 'php', link: '/other/php/' },
                     { text: 'python', link: '/other/python/' },
                 ]
@@ -75,7 +75,7 @@ module.exports = [
                 items: [
                     { text: '思路随笔', link: '/记录/思路随笔/2020-2-7-关于李文亮事件' },
                     { text: '零散笔记', link: '/记录/零散笔记/2020-1-28-crud案例知识点总结' },
-                    { text: '错误日志', link: '/记录/错误日志/2020-3-5-React Native Errors' },
+                    { text: '错误日志', link: '/记录/错误日志/2020-3-5-React-Native-Errors' },
                     { text: '疑问记录', link: '/记录/疑问记录/' }
                 ]
             },

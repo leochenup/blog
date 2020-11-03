@@ -1,0 +1,37 @@
+@font-face {font-family: "iconfont";
+  src: url('iconfont.eot?t=1604431099421'); /* IE9 */
+  src: url('iconfont.eot?t=1604431099421#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAOIAAsAAAAAB9QAAAM6AAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCDSAqCQII8ATYCJAMYCw4ABCAFhG0HXRv3BhEVnG3Ifh7Ytor1DecQKQksm5Kf6jIsuN9BhDprVivbcpIHZGgBqGSujqDPMyZAQFtX046z31xqsjtgAREq/AVDu/jkHrLf8ZBP1mf8z+X07ipLYH47y2WOaYt6URwHFNhYkyIrkDhBbVEvmNAOwqfDECBCSaoj7Tt274/DIkYJINOnTBqDq3mxWC3hEPyehRbZjYczW8wLYFf6eXlNXXFg8BQxsffEDuNpHV/8er+u/r/a8BiBt58Z0JaBAtUBC7K817oQzaPVUSLOL1i6AjEcBhtfHE+I/3z96/3//1MTCqcQk395IBgUiwfig/kxALpzzIP44lCNOLIEVGNQ9hNxKLyegcPC6/1leAD4Ow5wQB9gE4JcnUsFg6BIMWs1Z+DnXnaiQpIBSYn9U5LLm8RkanLywJSUQdsq6KH7s6JeZDKHp9lJi5jAHhGjXZCcPPhoclfzPGWmiQ7w+s8bQGRg/4gMGijViwdFKa3VLo8c0GzHssIdCnSovK92rybPtrP/Hek8bVQfkaxYJ53L7mXT0g/69zw38Fz/AdFE+h8fmFSV/l8Hjyw+f49MZBaz8tTBa0sdf2q2EYsmFxrgGg8NBgWNh7S8wrnExLNBKS1WvXndqtXrE4vYkbB8huUA/KcdtRqAYk4AaLXUvtp8r8vP/bfvsKLB9QKjcjX/6qIWgIzHL3+T+T87UwsvX8Zs3l/icZ11BULnW7t2uBUC+BRDATBARDbBv3HmJXsveYHZ+SA4CpRgCCgBiqM8aknVwSNKffBxtIII1ei0PEo+5qKIDYGqbAAQcnMJDDm5DUpuXqKWlAUeBXkLPrlFIQLvv5cNn70Wnt4YlaAFfYdgqLjAIE9Z4Tf6JSmuClLKP3ILARi7oZn4woK8x5R28ZOIA8eU4ROOw5QIKtMZjXSzSD31vet7UWcor568YUgRyALaHQgMUri4tXhqvf8b8haJwiM1HeZ/iDWhczDqDDPQL2mZVfMuzzQX3kQIBziMZOATzCjJKAG1v98ZMkRnXhGuTnpq5OZKu/Pl+Sm3ARHiEj8jKlY88SXg8aUFU0hwX1VxK+5qUvenC6Ul4xz8/HwNxdLVJGq4WgEAAA==') format('woff2'),
+  url('iconfont.woff?t=1604431099421') format('woff'),
+  url('iconfont.ttf?t=1604431099421') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+  url('iconfont.svg?t=1604431099421#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-musicnote:before {
+  content: "\e978";
+}
+
+.icon-pause:before {
+  content: "\e9d3";
+}
+
+.icon-play:before {
+  content: "\e9f9";
+}
+
+.icon-volumehigh:before {
+  content: "\eb6d";
+}
+
+.icon-windowclose:before {
+  content: "\eb9c";
+}
+

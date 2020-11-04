@@ -1,224 +1,248 @@
 <template>
-  <div :class="{ test: true, 'small-size-outer': !isOpen }">
-    <div class="audio-window small-size-img-outer">
-      <img src="./res/song-img.jpg" class="song-img small-size-img" />
-
-      <div class="controls-outer">
-        <div class="song-title">
-          <div class="innerP">A Foot print Of Feelings -Moonlit Sailor</div>
+  <div class="galloping-audio-outer">
+    <div class="main-outer">
+      <div class="audio-container">
+        <i class="iconfont icon-windowclose audio-arrow"></i>
+        <div class="img-con">
+          <img
+            src="./res/song-img.jpg"
+            :class="{ 'song-img': true, rotate: songMsg.isPlay }"
+          />
         </div>
-
-        <div class="controls-btn-progress-outer">
-          <i
-            v-bind:class="{
-              iconfont: true,
-              'icon-pause': isPlay,
-              'icon-play': !isPlay,
-            }"
-            @click="playHandler"
-          ></i>
-          <div class="time">00:00</div>
-          <div class="controls-progress-line">
-            <div class="controls-progress-dot"></div>
+        <div class="right-con">
+          <div class="song-title-con">
+            <div class="song-title">{{ songMsg.name }}</div>
           </div>
-          <div class="time">03:36</div>
+          <div class="right-bottom-con">
+            <i
+              :class="{
+                iconfont: true,
+                'icon-pause': songMsg.isPlay,
+                'icon-play': !songMsg.isPlay,
+              }"
+              @click="playHandler()"
+            ></i>
+            <div class="timeStart">{{ songMsg.currenTime }}</div>
+            <div class="song-progress-line">
+              <div class="song-progress-dot"></div>
+            </div>
+            <div class="timeEnd">{{ songMsg.totalTime }}</div>
+            <i class="iconfont icon-volumehigh"></i>
+          </div>
         </div>
-
-        <i class="iconfont icon-windowclose close-btn" @click="closeAudio"></i>
       </div>
     </div>
-
-    <audio src="./res/AFootprintOfFeelings.mp3"></audio>
-
-    <div
-      :class="{ 'small-control': true, 'hide-btn': isOpen }"
-      @click="openAudio"
-    >
-      <i class="iconfont icon-musicnote"></i>
-    </div>
+    <audio class="song-souce" src="./res/AFootprintOfFeelings.mp3" loop></audio>
   </div>
 </template>
 
 <script>
 import "./res/fonts/iconfont.css";
-
 export default {
   data: () => ({
-    isPlay: false,
-    isOpen: false,
-  }),
-  methods: {
-    playHandler() {
-      this.isPlay = !this.isPlay;
-      if (this.isPlay) {
-        this.autoTitleMove();
-      } else {
-        this.stopTitleMove();
-      }
+    songMsg: {
+      name: "A Foot print Of Feelings –– Moonlit Sailor",
+      totalTime: "03:23",
+      currenTime: "00:00",
+      isPlay: false,
     },
-    autoTitleMove() {
-      let titleDom = document.querySelector(".song-title>.innerP");
-      let currentML = 0;
+  }),
+  mounted() {
+    this.$audioSource = document.querySelector(".song-souce");
+    this.$audioSource.volume = 0.01;
+    this.$songTtile = document.querySelector(".song-title");
+    this.$songImg = document.querySelector(".song-img");
+  },
+  methods: {
+    startSongTitleMove() {
+      let currenMarginLeft = this.$songTtile.style.marginLeft
+        ? parseInt(this.$songTtile.style.marginLeft)
+        : 0;
       this.$timer = setInterval(() => {
-        if (currentML > -222) {
-          currentML -= 3;
+        if (currenMarginLeft >= -this.$songTtile.clientWidth) {
+          currenMarginLeft -= 5;
         } else {
-          currentML = 250;
+          currenMarginLeft = document.querySelector(".song-title-con")
+            .clientWidth;
         }
-        titleDom.style.marginLeft = currentML + "px";
+        this.$songTtile.style.marginLeft = currenMarginLeft + "px";
       }, 100);
     },
-    stopTitleMove() {
+    StopSongTitleMove() {
       clearInterval(this.$timer);
-      let titleDom = document.querySelector(".song-title>.innerP");
-      titleDom.style.marginLeft = 0 + "px";
+      this.$songTtile.style.marginLeft = 0 + "px";
     },
-    openAudio() {
-      this.isOpen = true;
+    imgRotate() {
+      if (this.songMsg.isPlay) {
+      } else {
+      }
     },
-    closeAudio() {
-      this.isOpen = false;
+    playHandler() {
+      console.log("click");
+      this.songMsg.isPlay = !this.songMsg.isPlay;
+      if (this.songMsg.isPlay) {
+        this.startSongTitleMove();
+      } else {
+        this.StopSongTitleMove();
+      }
     },
   },
-  mounted() {},
 };
 </script>
 
 <style>
 :root {
   --theme-color-1: #3eaf7c;
-  --background: #1a1a1a;
-  --box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.6);
+  --background: #222;
+  --box-shadow-1: 0 1px 8px 0 rgba(0, 0, 0, 0.6);
 }
-
+html.dark {
+}
 html.light {
   --background: #fff;
-  --box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.1);
-}
-.test {
-  position: fixed;
-  bottom: 5.5rem;
-  right: 0px;
-  user-select: none;
-  transition: all 0.3s ease-in-out;
-  box-shadow: var(--box-shadow);
-  background: var(--background);
-}
-.small-size-outer {
-  right: -355px;
+  --box-shadow-1: 0 1px 8px 0 rgba(0, 0, 0, 0.3);
 }
 
-.audio-window {
-  width: 350px;
-  display: flex;
-  align-items: center;
-  box-sizing: border-box;
-  background: --background;
-}
-
-.song-img {
-  width: 64px;
-  height: 64px;
-  margin-right: 5px;
-  position: relative;
-}
-
-.song-title {
+.timeStart,
+.timeEnd {
   font-size: 12px;
-  width: 240px;
-  white-space: nowrap;
-  margin-bottom: 5px;
-  overflow: hidden;
-  box-sizing: border-box;
-  margin-left: 50%;
-  transform: translateX(-55%);
 }
-.time {
-  font-size: 10px;
+.timeStart {
+  margin-left: 5px;
 }
-
+.timeEnd {
+  margin-right: 5px;
+}
+.icon-volumehigh,
 .icon-pause,
 .icon-play {
   font-size: 20px;
-  margin-right: 5px;
   cursor: pointer;
 }
-.icon-volumehigh {
-  font-size: 20px;
-  margin-left: 5px;
-  cursor: pointer;
+.galloping-audio-outer {
+  position: fixed;
+  width: 100%;
+  height: 70px;
+  bottom: 1rem;
+  padding-left: 18rem;
+  padding-right: 14rem;
+  box-sizing: border-box;
+  /* z-index: 99999; */
+  user-select: none;
 }
-.innerP {
-  display: inline-block;
+.audio-arrow {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  color: #8b8b8b;
+  font-size: 14px;
 }
-
-.controls-outer {
+.main-outer {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+.audio-container {
+  position: relative;
+  margin: 0 auto;
+  max-width: 860px;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  border-radius: 5px;
+  box-shadow: var(--box-shadow-1);
+  background: var(--background);
+}
+.img-con {
+  background: var(--background);
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.song-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-top: 10px;
+  margin: 10px 10px 0 10px;
+}
+.right-con {
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  padding: 10px 0;
-  padding-right: 10px;
-}
-
-.controls-title-outer {
-  display: flex;
-  width: 100%;
-}
-
-.controls-btn-progress-outer {
-  width: 100%;
-  display: flex;
-  align-items: center;
-}
-
-.controls-progress-line {
-  width: 100%;
-  height: 2px;
-  background: #ccc;
-  margin: 0 5px;
+  justify-content: center;
+  align-content: center;
+  justify-content: flex-end;
   position: relative;
-  border-radius: 1px;
 }
-.controls-progress-dot {
+.song-title-con {
+  /* margin-bottom: 10px; */
+  white-space: nowrap;
+  overflow: hidden;
+  position: absolute;
+  top: 10px;
+  width: 80%;
+  box-sizing: border-box;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+.song-title {
+  font-size: 14px;
+  margin-left: 0;
+  width: fit-content;
+}
+.right-bottom-con {
+  display: flex;
+  margin-right: 25px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.song-progress-line {
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background: #8b8b8b;
+  margin: 0 6px;
+  margin-top: 1px;
+  position: relative;
+}
+
+.song-progress-dot {
   width: 8px;
   height: 8px;
-  background: #3eac7a;
+  background: #3eaf7c;
+  border-radius: 4px;
   position: absolute;
-  left: 0;
-  top: -3px;
-  border-radius: 50%;
-  cursor: pointer;
-}
-.close-btn {
-  position: absolute;
-  top: 5px;
-  right: 5px;
-  font-size: 13px;
-  cursor: pointer;
+  top: -2px;
+  left: 0px;
 }
 
-.small-control {
-  width: 40px;
-  height: 40px;
-  background: --background;
-  position: absolute;
-  left: -61px;
-  bottom: 0px;
-  box-shadow: var(--box-shadow);
-  line-height: 40px;
-  text-align: center;
-  border-radius: 0.25rem;
+.rotate {
+  -webkit-animation: rotate 15s infinite linear;
 }
-.small-control > i {
-  font-size: 26px;
-  color: #3eaf7c;
-  opacity: 1;
-  transition: all 0.3s ease-in-out;
+
+@-webkit-keyframes rotate {
+  form {
+    transform: rotate(0) infinite;
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
-.hide-btn {
-  visibility: hidden;
-  opacity: 0;
+
+@media (max-width: 1279px) {
+  .galloping-audio-outer {
+    padding-right: 0 !important;
+  }
+}
+
+@media (max-width: 1055px) {
+  .galloping-audio-outer {
+    padding-left: 0 !important;
+  }
 }
 </style>

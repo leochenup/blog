@@ -1,5 +1,5 @@
 <template>
-  <div class="show-arrow" @click="musicBtnClick" v-if="isLoad">
+  <div class="show-arrow" @click="musicBtnClick" v-if="!isLoad">
     <i class="iconfont icon-musicnote"></i>
   </div>
 </template>
@@ -14,10 +14,12 @@ export default {
   mounted() {
     setTimeout(() => {
       let audioSource = document.querySelector(".song-souce");
-      audioSource.addEventListener("canplay", function () {
-        console.log("加载完成")
+      let fun = function () {
+        console.log("加载完成.....");
         this.isLoad = false;
-      });
+        audioSource.removeEventListener("canplay", fun);
+      };
+      audioSource.addEventListener("canplay", fun);
     });
   },
   methods: {

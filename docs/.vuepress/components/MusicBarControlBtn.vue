@@ -15,6 +15,9 @@ export default {
   },
   mounted() {
     setTimeout(() => {
+      let musicBar = document.querySelector(".galloping-audio-outer");
+      musicBar.classList.remove("show");
+      musicBar.classList.add("hidden");
       let audioSource = document.querySelector(".song-souce");
       audioSource.addEventListener("canplay", () => {
         this.isLoad = false;

@@ -1,5 +1,5 @@
 <template>
-  <div class="galloping-audio-outer hidden">
+  <div class="galloping-audio-outer show">
     <div class="main-outer">
       <div class="audio-container">
         <div class="audio-arrow-outer" @click="closeMusicBar">
@@ -96,14 +96,14 @@ export default {
       this.$songTtile.style.marginLeft = 0 + "px";
     },
     playHandler() {
-      this.songMsg.isPlay = !this.songMsg.isPlay;
-      // if (this.songMsg.isPlay) {
-      //   this.startSongTitleMove();
-      //   this.playMusic();
-      // } else {
-      //   this.pauseMusic();
-      //   this.StopSongTitleMove();
-      // }
+      // this.songMsg.isPlay = !this.songMsg.isPlay;
+      if (this.songMsg.isPlay) {
+        this.startSongTitleMove();
+        this.playMusic();
+      } else {
+        this.pauseMusic();
+        this.StopSongTitleMove();
+      }
     },
     progressMouseDownHandler(e) {
       let progressLine = document.querySelector(".song-progress-line");

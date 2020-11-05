@@ -155,7 +155,7 @@ export default {
       this.isShowVolumeBar = !this.isShowVolumeBar;
     },
     closeMusicBar(e) {
-      console.log("closeMusicBar")
+      console.log("closeMusicBar");
       let musicBar = document.querySelector(".galloping-audio-outer");
       musicBar.classList.remove("show");
       musicBar.classList.add("hidden");

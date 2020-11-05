@@ -34,7 +34,7 @@ export default {
 
 <style>
 .icon-musicnote {
-  color: #3eaf7c;
+  color: #3eaf7c !important;
   font-size: 20px;
 }
 .show-arrow {

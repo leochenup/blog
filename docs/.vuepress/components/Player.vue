@@ -23,12 +23,27 @@
               @click="playHandler()"
             ></i>
             <div class="timeStart">{{ songMsg.currenTime }}</div>
-            <div class="song-progress-line" @mousedown="mouseDownHandler">
-              <div class="song-progress-dot"></div>
+            <div
+              class="song-progress-line"
+              @mousedown="progressMouseDownHandler"
+              @click="progressClickHandler"
+            >
+              <div class="song-progress-active">
+                <div class="song-progress-dot"></div>
+              </div>
             </div>
             <div class="timeEnd">{{ songMsg.totalTime }}</div>
-            <i class="iconfont icon-volumehigh"></i>
+            <i class="iconfont icon-volumehigh" @click="volumeCilck"></i>
           </div>
+        </div>
+        <div
+          :class="{
+            'volume-bar-outer': true,
+            show: isShowVolumeBar,
+            hidden: !isShowVolumeBar,
+          }"
+        >
+          <div class="volume-active"></div>
         </div>
       </div>
     </div>
@@ -46,6 +61,7 @@ export default {
       currenTime: "00:00",
       isPlay: false,
     },
+    isShowVolumeBar: false,
   }),
   mounted() {
     this.$audioSource = document.querySelector(".song-souce");
@@ -81,7 +97,29 @@ export default {
         this.StopSongTitleMove();
       }
     },
-    mouseDownHandler() {},
+    progressMouseDownHandler(e) {
+      let progressLine = document.querySelector(".song-progress-line");
+      let active = document.querySelector(".song-progress-active");
+      let obj = progressLine.getBoundingClientRect();
+
+      let mousemove = (e) => {
+        active.style.width = e.clientX - obj.left + "px";
+      };
+      let mouseup = (e) => {
+        document.removeEventListener("mousemove", mousemove);
+      };
+      document.addEventListener("mousemove", mousemove);
+      document.addEventListener("mouseup", mouseup);
+    },
+    progressClickHandler(e) {
+      let progressLine = document.querySelector(".song-progress-line");
+      let active = document.querySelector(".song-progress-active");
+      let obj = progressLine.getBoundingClientRect();
+      active.style.width = e.clientX - obj.left + "px";
+    },
+    volumeCilck() {
+      this.isShowVolumeBar = !this.isShowVolumeBar;
+    },
   },
 };
 </script>
@@ -201,9 +239,18 @@ html.light {
   height: 4px;
   border-radius: 2px;
   background: #8b8b8b;
-  margin: 0 6px;
+  margin: 0 10px;
   margin-top: 1px;
   position: relative;
+  cursor: pointer;
+}
+.song-progress-active {
+  width: 100px;
+  height: 100%;
+  border-radius: 2px;
+  background: #3eaf7c;
+  position: relative;
+  left: 0;
 }
 
 .song-progress-dot {
@@ -213,7 +260,39 @@ html.light {
   border-radius: 4px;
   position: absolute;
   top: -2px;
-  left: 0px;
+  right: -4px;
+}
+
+.volume-bar-outer {
+  position: absolute;
+  width: 150px;
+  height: 15px;
+  right: 0;
+  top: -20px;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+  visibility: hidden;
+  opacity: 0;
+  padding: 4px;
+  box-sizing: border-box;
+  background: var(--background);
+  box-shadow: var(--box-shadow-1);
+}
+.volume-active {
+  border-radius: 3px;
+  width: 50px;
+  height: 100%;
+  background: #3eaf7c;
+}
+
+.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.hidden {
+  opacity: 0;
+  visibility: hidden;
 }
 
 .rotate {

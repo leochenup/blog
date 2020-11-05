@@ -23,7 +23,7 @@
               @click="playHandler()"
             ></i>
             <div class="timeStart">{{ songMsg.currenTime }}</div>
-            <div class="song-progress-line">
+            <div class="song-progress-line" @mousedown="mouseDownHandler">
               <div class="song-progress-dot"></div>
             </div>
             <div class="timeEnd">{{ songMsg.totalTime }}</div>
@@ -72,11 +72,6 @@ export default {
       clearInterval(this.$timer);
       this.$songTtile.style.marginLeft = 0 + "px";
     },
-    imgRotate() {
-      if (this.songMsg.isPlay) {
-      } else {
-      }
-    },
     playHandler() {
       console.log("click");
       this.songMsg.isPlay = !this.songMsg.isPlay;
@@ -86,6 +81,7 @@ export default {
         this.StopSongTitleMove();
       }
     },
+    mouseDownHandler() {},
   },
 };
 </script>
@@ -108,7 +104,7 @@ html.light {
   font-size: 12px;
 }
 .timeStart {
-  margin-left: 5px;
+  /* margin-left: 5px; */
 }
 .timeEnd {
   margin-right: 5px;
@@ -116,26 +112,26 @@ html.light {
 .icon-volumehigh,
 .icon-pause,
 .icon-play {
-  font-size: 20px;
-  cursor: pointer;
+  font-size: 20px !important;
+  cursor: pointer !important;
 }
 .galloping-audio-outer {
   position: fixed;
   width: 100%;
   height: 70px;
   bottom: 1rem;
-  padding-left: 18rem;
-  padding-right: 14rem;
+  padding-left: 18rem !important;
+  padding-right: 14rem !important;
   box-sizing: border-box;
   /* z-index: 99999; */
-  user-select: none;
+  user-select: none !important;
 }
 .audio-arrow {
   position: absolute;
   top: 5px;
   right: 5px;
-  color: #8b8b8b;
-  font-size: 14px;
+  color: #8b8b8b !important;
+  font-size: 14px !important;
 }
 .main-outer {
   width: 100%;
@@ -163,8 +159,8 @@ html.light {
   height: 100%;
 }
 .song-img {
-  width: 50px;
-  height: 50px;
+  width: 50px !important;
+  height: 50px !important;
   border-radius: 50%;
   margin: 10px;
 }
@@ -173,13 +169,12 @@ html.light {
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  /* justify-content: center !important; */
   align-content: center;
   justify-content: flex-end;
   position: relative;
 }
 .song-title-con {
-  /* margin-bottom: 10px; */
   white-space: nowrap;
   overflow: hidden;
   position: absolute;
@@ -190,9 +185,9 @@ html.light {
   transform: translateX(-50%);
 }
 .song-title {
-  font-size: 14px;
+  font-size: 14px !important;
   margin-left: 0;
-  width: fit-content;
+  width: fit-content !important;
 }
 .right-bottom-con {
   display: flex;

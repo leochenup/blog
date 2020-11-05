@@ -171,7 +171,8 @@ export default {
         } else if (volumeActiveWidth > volumeBarPositionObj.width - 8) {
           volumeActiveWidth = volumeBarPositionObj.width - 8;
         }
-        volumeActive.style.width = volumeActiveWidth + "px";
+        volumeActive.style.width =
+          (volumeActiveWidth / volumeBarPositionObj.width) * 100 + "%";
         let percent = parseFloat(
           volumeActiveWidth / volumeBarPositionObj.width
         );
@@ -193,7 +194,8 @@ export default {
       } else if (volumeActiveWidth > volumeBarPositionObj.width - 8) {
         volumeActiveWidth = volumeBarPositionObj.width - 8;
       }
-      volumeActive.style.width = volumeActiveWidth + "px";
+      volumeActive.style.width =
+        (volumeActiveWidth / volumeBarPositionObj.width) * 100 + "%";
       let percent = parseFloat(volumeActiveWidth / volumeBarPositionObj.width);
       this.$audioSource.volume = percent;
     },

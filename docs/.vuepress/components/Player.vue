@@ -51,7 +51,11 @@
         </div>
       </div>
     </div>
-    <audio class="song-souce" src="./res/AFootprintOfFeelings.mp3" loop></audio>
+    <audio
+      class="song-souce"
+      src="https://my-blog-leo.oss-cn-chengdu.aliyuncs.com/AFootprintOfFeelings.mp3"
+      loop
+    ></audio>
   </div>
 </template>
 
@@ -168,8 +172,8 @@ export default {
         let volumeActiveWidth = e.clientX - volumeBarPositionObj.x;
         if (volumeActiveWidth <= 0) {
           volumeActiveWidth = 0;
-        } else if (volumeActiveWidth > volumeBarPositionObj.width - 8) {
-          volumeActiveWidth = volumeBarPositionObj.width - 8;
+        } else if (volumeActiveWidth > volumeBarPositionObj.width - 4) {
+          volumeActiveWidth = volumeBarPositionObj.width;
         }
         volumeActive.style.width =
           (volumeActiveWidth / volumeBarPositionObj.width) * 100 + "%";
@@ -191,8 +195,8 @@ export default {
       let volumeActiveWidth = e.clientX - volumeBarPositionObj.x;
       if (volumeActiveWidth <= 0) {
         volumeActiveWidth = 0;
-      } else if (volumeActiveWidth > volumeBarPositionObj.width - 8) {
-        volumeActiveWidth = volumeBarPositionObj.width - 8;
+      } else if (volumeActiveWidth > volumeBarPositionObj.width - 4) {
+        volumeActiveWidth = volumeBarPositionObj.width;
       }
       volumeActive.style.width =
         (volumeActiveWidth / volumeBarPositionObj.width) * 100 + "%";

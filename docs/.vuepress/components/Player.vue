@@ -150,7 +150,6 @@ html.light {
   border-radius: 5px;
   box-shadow: var(--box-shadow-1);
   background: var(--background);
-  border: 1px solid;
 }
 .img-con {
   background: var(--background);
@@ -162,7 +161,8 @@ html.light {
   width: 50px !important;
   height: 50px !important;
   border-radius: 50%;
-  margin: 10px !important;
+  margin: 8px !important;
+  border: 2px solid #3eaf7c;
 }
 .right-con {
   width: 100%;

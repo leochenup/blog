@@ -181,6 +181,7 @@ export default {
           volumeActiveWidth / volumeBarPositionObj.width
         );
         this.$audioSource.volume = percent;
+        alert(this.$audioSource.volume);
       };
       let mouseup = (e) => {
         document.removeEventListener("mousemove", mousemove);
@@ -202,6 +203,7 @@ export default {
         (volumeActiveWidth / volumeBarPositionObj.width) * 100 + "%";
       let percent = parseFloat(volumeActiveWidth / volumeBarPositionObj.width);
       this.$audioSource.volume = percent;
+      alert(this.$audioSource.volume);
     },
     playMusic() {
       let progressActive = document.querySelector(".song-progress-active");

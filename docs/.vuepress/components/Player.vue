@@ -96,17 +96,14 @@ export default {
       this.$songTtile.style.marginLeft = 0 + "px";
     },
     playHandler() {
-      this.songMsg.isPlay = !this.songMsg.isPlay;
-      if (this.songMsg.isPlay) {
-        this.startSongTitleMove();
-        this.playMusic();
-        let musicBar = document.querySelector(".galloping-audio-outer");
-        musicBar.classList.remove("hidden");
-        musicBar.classList.add("show");
-      } else {
-        this.pauseMusic();
-        this.StopSongTitleMove();
-      }
+      // this.songMsg.isPlay = !this.songMsg.isPlay;
+      // if (this.songMsg.isPlay) {
+      //   this.startSongTitleMove();
+      //   this.playMusic();
+      // } else {
+      //   this.pauseMusic();
+      //   this.StopSongTitleMove();
+      // }
     },
     progressMouseDownHandler(e) {
       let progressLine = document.querySelector(".song-progress-line");
@@ -158,7 +155,6 @@ export default {
       this.isShowVolumeBar = !this.isShowVolumeBar;
     },
     closeMusicBar(e) {
-      console.log("closeMusicBar");
       let musicBar = document.querySelector(".galloping-audio-outer");
       musicBar.classList.remove("show");
       musicBar.classList.add("hidden");

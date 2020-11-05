@@ -18,7 +18,7 @@ export default {
       let audioSource = document.querySelector(".song-souce");
       audioSource.addEventListener("canplay", () => {
         this.isLoad = false;
-        console.log("加载完成.....!!!");
+        console.log("!!!加载完成.....!!!");
       });
     });
   },

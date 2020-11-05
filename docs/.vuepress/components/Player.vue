@@ -123,7 +123,6 @@ html.light {
   padding-left: 18rem !important;
   padding-right: 14rem !important;
   box-sizing: border-box;
-  /* z-index: 99999; */
   user-select: none !important;
 }
 .audio-arrow {
@@ -151,6 +150,7 @@ html.light {
   border-radius: 5px;
   box-shadow: var(--box-shadow-1);
   background: var(--background);
+  border: 1px solid;
 }
 .img-con {
   background: var(--background);
@@ -162,7 +162,7 @@ html.light {
   width: 50px !important;
   height: 50px !important;
   border-radius: 50%;
-  margin: 10px;
+  margin: 10px !important;
 }
 .right-con {
   width: 100%;

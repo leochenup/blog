@@ -167,6 +167,7 @@ export default {
       let volumeBar = document.querySelector(".volume-bar-outer");
       let volumeActive = document.querySelector(".volume-active");
       let volumeBarPositionObj = volumeBar.getBoundingClientRect();
+      this.$audioSource = document.querySelector(".song-souce");
 
       let mousemove = (e) => {
         let volumeActiveWidth = e.clientX - volumeBarPositionObj.x;
@@ -180,8 +181,7 @@ export default {
         let percent = parseFloat(
           volumeActiveWidth / volumeBarPositionObj.width
         );
-        this.$audioSource.volume = percent;
-        alert(this.$audioSource.volume);
+        document.querySelector(".song-souce").volume = percent;
       };
       let mouseup = (e) => {
         document.removeEventListener("mousemove", mousemove);
@@ -202,8 +202,7 @@ export default {
       volumeActive.style.width =
         (volumeActiveWidth / volumeBarPositionObj.width) * 100 + "%";
       let percent = parseFloat(volumeActiveWidth / volumeBarPositionObj.width);
-      this.$audioSource.volume = percent;
-      alert(this.$audioSource.volume);
+      document.querySelector(".song-souce").volume = percent;
     },
     playMusic() {
       let progressActive = document.querySelector(".song-progress-active");

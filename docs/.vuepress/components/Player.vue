@@ -96,7 +96,7 @@ export default {
       this.$songTtile.style.marginLeft = 0 + "px";
     },
     playHandler() {
-      // this.songMsg.isPlay = !this.songMsg.isPlay;
+      this.songMsg.isPlay = !this.songMsg.isPlay;
       if (this.songMsg.isPlay) {
         this.startSongTitleMove();
         this.playMusic();

@@ -131,8 +131,7 @@ export default {
               this.$audioSource.duration * precent;
             document.removeEventListener("mousemove", mousemove);
             document.removeEventListener("mouseup", mouseup);
-          } catch (error) {
-          }
+          } catch (error) {}
         }
       };
       document.addEventListener("mousemove", mousemove);
@@ -265,10 +264,10 @@ html.light {
   padding-right: 14rem !important;
   box-sizing: border-box;
   user-select: none !important;
-  z-index: 99999;
   visibility: hidden;
   opacity: 0;
   transition: all 0.3s ease-in-out;
+  z-index: 99999;
 }
 .audio-arrow-outer {
   position: absolute;

@@ -1,5 +1,5 @@
 <template>
-  <div class="galloping-audio-outer">
+  <div class="galloping-audio-outer hidden">
     <div class="main-outer">
       <div class="audio-container">
         <div class="audio-arrow-outer" @click="closeMusicBar">
@@ -22,7 +22,7 @@
                 'icon-pause': songMsg.isPlay,
                 'icon-play': !songMsg.isPlay,
               }"
-              @click="playHandler()"
+              @click="playHandler"
             ></i>
             <div class="timeStart">{{ songMsg.currenTime }}</div>
             <div
@@ -69,7 +69,6 @@ export default {
     isShowMusicBar: false,
   }),
   mounted() {
-    console.log("mounted");
     this.$audioSource = document.querySelector(".song-souce");
     this.$audioSource.volume = 0.03;
     this.$songTtile = document.querySelector(".song-title");
@@ -152,11 +151,11 @@ export default {
       active.style.width = precent * 100 + "%";
       this.$audioSource.currentTime = this.$audioSource.duration * precent;
     },
-
     volumeCilck() {
       this.isShowVolumeBar = !this.isShowVolumeBar;
     },
-    closeMusicBar() {
+    closeMusicBar(e) {
+      console.log("closeMusicBar")
       let musicBar = document.querySelector(".galloping-audio-outer");
       musicBar.classList.remove("show");
       musicBar.classList.add("hidden");
@@ -196,14 +195,15 @@ export default {
         volumeActiveWidth = volumeBarPositionObj.width - 8;
       }
       volumeActive.style.width = volumeActiveWidth + "px";
+      let percent = parseFloat(volumeActiveWidth / volumeBarPositionObj.width);
+      this.$audioSource.volume = percent;
     },
     playMusic() {
-      let songSource = document.querySelector(".song-souce");
       let progressActive = document.querySelector(".song-progress-active");
-      songSource.play();
+      this.$audioSource.play();
       this.$songSourceTimer = setInterval(() => {
-        let min = parseInt(songSource.currentTime / 60);
-        let second = parseInt(songSource.currentTime % 60);
+        let min = parseInt(this.$audioSource.currentTime / 60);
+        let second = parseInt(this.$audioSource.currentTime % 60);
         if (min < 10) {
           min = "0" + min;
         }
@@ -211,13 +211,13 @@ export default {
           second = "0" + second;
         }
         this.songMsg.currenTime = min + ":" + second;
-        let widt = (songSource.currentTime / songSource.duration) * 100;
+        let widt =
+          (this.$audioSource.currentTime / this.$audioSource.duration) * 100;
         progressActive.style.width = widt + "%";
       }, 1000);
     },
     pauseMusic() {
-      let songSource = document.querySelector(".song-souce");
-      songSource.pause();
+      this.$audioSource.pause();
       clearInterval(this.$songSourceTimer);
     },
   },
@@ -385,6 +385,7 @@ html.light {
   box-sizing: border-box;
   background: var(--background);
   box-shadow: var(--box-shadow-1);
+  cursor: pointer;
 }
 .volume-active {
   border-radius: 3px;

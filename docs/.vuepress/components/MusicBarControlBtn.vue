@@ -15,12 +15,7 @@ export default {
     musicBtnClick() {
       let musicBar = document.querySelector(".galloping-audio-outer");
 
-      if (
-        !musicBar.classList.contains("hidden") &&
-        !musicBar.classList.contains("show")
-      ) {
-        musicBar.classList.add("show");
-      } else if (musicBar.classList.contains("hidden")) {
+      if (musicBar.classList.contains("hidden")) {
         musicBar.classList.remove("hidden");
         musicBar.classList.add("show");
       } else {

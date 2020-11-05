@@ -1,5 +1,5 @@
 <template>
-  <div class="show-arrow" @click="musicBtnClick" v-show="!isLoad">
+  <div class="show-arrow" @click="musicBtnClick">
     <i class="iconfont icon-musicnote"></i>
   </div>
 </template>
@@ -9,22 +9,9 @@ import "./res/fonts/iconfont.css";
 
 export default {
   data() {
-    return {
-      isLoad: true,
-    };
+    return {};
   },
-  mounted() {
-    setTimeout(() => {
-      let musicBar = document.querySelector(".galloping-audio-outer");
-      musicBar.classList.remove("show");
-      musicBar.classList.add("hidden");
-      let audioSource = document.querySelector(".song-souce");
-      audioSource.addEventListener("canplay", () => {
-        this.isLoad = false;
-        console.log("!!!加载完成.....!!!");
-      });
-    });
-  },
+
   methods: {
     musicBtnClick() {
       let musicBar = document.querySelector(".galloping-audio-outer");

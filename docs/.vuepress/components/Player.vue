@@ -160,13 +160,13 @@ html.light {
   background: var(--background);
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
+  height: 100%;
 }
 .song-img {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  margin-top: 10px;
-  margin: 10px 10px 0 10px;
+  margin: 10px;
 }
 .right-con {
   width: 100%;

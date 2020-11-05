@@ -100,6 +100,9 @@ export default {
       if (this.songMsg.isPlay) {
         this.startSongTitleMove();
         this.playMusic();
+        let musicBar = document.querySelector(".galloping-audio-outer");
+        musicBar.classList.remove("hidden");
+        musicBar.classList.add("show");
       } else {
         this.pauseMusic();
         this.StopSongTitleMove();

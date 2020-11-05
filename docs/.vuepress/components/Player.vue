@@ -2,7 +2,9 @@
   <div class="galloping-audio-outer">
     <div class="main-outer">
       <div class="audio-container">
-        <i class="iconfont icon-windowclose audio-arrow"></i>
+        <div class="audio-arrow-outer" @click="closeMusicBar">
+          <i class="iconfont icon-windowclose audio-arrow"></i>
+        </div>
         <div class="img-con">
           <img
             src="./res/song-img.jpg"
@@ -42,6 +44,8 @@
             show: isShowVolumeBar,
             hidden: !isShowVolumeBar,
           }"
+          @mousedown="volumeMouseDown"
+          @click="volumeBarClick"
         >
           <div class="volume-active"></div>
         </div>
@@ -57,17 +61,21 @@ export default {
   data: () => ({
     songMsg: {
       name: "A Foot print Of Feelings –– Moonlit Sailor",
-      totalTime: "03:23",
+      totalTime: "03:22",
       currenTime: "00:00",
       isPlay: false,
     },
     isShowVolumeBar: false,
+    isShowMusicBar: false,
   }),
   mounted() {
+    console.log("mounted");
     this.$audioSource = document.querySelector(".song-souce");
-    this.$audioSource.volume = 0.01;
+    this.$audioSource.volume = 0.03;
     this.$songTtile = document.querySelector(".song-title");
     this.$songImg = document.querySelector(".song-img");
+    let volumeActive = document.querySelector(".volume-active");
+    volumeActive.style.width = this.$audioSource.volume * 100 + "%";
   },
   methods: {
     startSongTitleMove() {
@@ -89,11 +97,12 @@ export default {
       this.$songTtile.style.marginLeft = 0 + "px";
     },
     playHandler() {
-      console.log("click");
       this.songMsg.isPlay = !this.songMsg.isPlay;
       if (this.songMsg.isPlay) {
         this.startSongTitleMove();
+        this.playMusic();
       } else {
+        this.pauseMusic();
         this.StopSongTitleMove();
       }
     },
@@ -101,9 +110,75 @@ export default {
       let progressLine = document.querySelector(".song-progress-line");
       let active = document.querySelector(".song-progress-active");
       let obj = progressLine.getBoundingClientRect();
+      let precent;
+      let isFirstMouseup = true;
+      let mousemove = (e) => {
+        let activeWidth = e.clientX - obj.left;
+        if (activeWidth <= 0) {
+          activeWidth = 0;
+        } else if (activeWidth > obj.width) {
+          activeWidth = obj.width;
+        }
+        precent = activeWidth / obj.width;
+        active.style.width = precent * 100 + "%";
+      };
+      this.mousemove = mousemove;
+      let mouseup = () => {
+        if (isFirstMouseup) {
+          try {
+            isFirstMouseup = false;
+            this.$audioSource.currentTime =
+              this.$audioSource.duration * precent;
+            document.removeEventListener("mousemove", mousemove);
+            document.removeEventListener("mouseup", mouseup);
+          } catch (error) {
+          }
+        }
+      };
+      document.addEventListener("mousemove", mousemove);
+      document.addEventListener("mouseup", mouseup);
+    },
+    progressClickHandler(e) {
+      document.removeEventListener("mousemove", this.mousemove);
+      let progressLine = document.querySelector(".song-progress-line");
+      let active = document.querySelector(".song-progress-active");
+      let obj = progressLine.getBoundingClientRect();
+      let activeWidth = e.clientX - obj.left;
+      if (activeWidth <= 0) {
+        activeWidth = 0;
+      } else if (activeWidth > obj.width) {
+        activeWidth = obj.width;
+      }
+      let precent = activeWidth / obj.width;
+      active.style.width = precent * 100 + "%";
+      this.$audioSource.currentTime = this.$audioSource.duration * precent;
+    },
+
+    volumeCilck() {
+      this.isShowVolumeBar = !this.isShowVolumeBar;
+    },
+    closeMusicBar() {
+      let musicBar = document.querySelector(".galloping-audio-outer");
+      musicBar.classList.remove("show");
+      musicBar.classList.add("hidden");
+    },
+    volumeMouseDown() {
+      let volumeBar = document.querySelector(".volume-bar-outer");
+      let volumeActive = document.querySelector(".volume-active");
+      let volumeBarPositionObj = volumeBar.getBoundingClientRect();
 
       let mousemove = (e) => {
-        active.style.width = e.clientX - obj.left + "px";
+        let volumeActiveWidth = e.clientX - volumeBarPositionObj.x;
+        if (volumeActiveWidth <= 0) {
+          volumeActiveWidth = 0;
+        } else if (volumeActiveWidth > volumeBarPositionObj.width - 8) {
+          volumeActiveWidth = volumeBarPositionObj.width - 8;
+        }
+        volumeActive.style.width = volumeActiveWidth + "px";
+        let percent = parseFloat(
+          volumeActiveWidth / volumeBarPositionObj.width
+        );
+        this.$audioSource.volume = percent;
       };
       let mouseup = (e) => {
         document.removeEventListener("mousemove", mousemove);
@@ -111,14 +186,40 @@ export default {
       document.addEventListener("mousemove", mousemove);
       document.addEventListener("mouseup", mouseup);
     },
-    progressClickHandler(e) {
-      let progressLine = document.querySelector(".song-progress-line");
-      let active = document.querySelector(".song-progress-active");
-      let obj = progressLine.getBoundingClientRect();
-      active.style.width = e.clientX - obj.left + "px";
+    volumeBarClick(e) {
+      let volumeBar = document.querySelector(".volume-bar-outer");
+      let volumeActive = document.querySelector(".volume-active");
+      let volumeBarPositionObj = volumeBar.getBoundingClientRect();
+      let volumeActiveWidth = e.clientX - volumeBarPositionObj.x;
+      if (volumeActiveWidth <= 0) {
+        volumeActiveWidth = 0;
+      } else if (volumeActiveWidth > volumeBarPositionObj.width - 8) {
+        volumeActiveWidth = volumeBarPositionObj.width - 8;
+      }
+      volumeActive.style.width = volumeActiveWidth + "px";
     },
-    volumeCilck() {
-      this.isShowVolumeBar = !this.isShowVolumeBar;
+    playMusic() {
+      let songSource = document.querySelector(".song-souce");
+      let progressActive = document.querySelector(".song-progress-active");
+      songSource.play();
+      this.$songSourceTimer = setInterval(() => {
+        let min = parseInt(songSource.currentTime / 60);
+        let second = parseInt(songSource.currentTime % 60);
+        if (min < 10) {
+          min = "0" + min;
+        }
+        if (second < 10) {
+          second = "0" + second;
+        }
+        this.songMsg.currenTime = min + ":" + second;
+        let widt = (songSource.currentTime / songSource.duration) * 100;
+        progressActive.style.width = widt + "%";
+      }, 1000);
+    },
+    pauseMusic() {
+      let songSource = document.querySelector(".song-souce");
+      songSource.pause();
+      clearInterval(this.$songSourceTimer);
     },
   },
 };
@@ -140,9 +241,10 @@ html.light {
 .timeStart,
 .timeEnd {
   font-size: 12px;
+  width: 43px;
 }
 .timeStart {
-  /* margin-left: 5px; */
+  margin-left: 5px;
 }
 .timeEnd {
   margin-right: 5px;
@@ -153,6 +255,7 @@ html.light {
   font-size: 20px !important;
   cursor: pointer !important;
 }
+
 .galloping-audio-outer {
   position: fixed;
   width: 100%;
@@ -162,11 +265,18 @@ html.light {
   padding-right: 14rem !important;
   box-sizing: border-box;
   user-select: none !important;
+  z-index: 99999;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
 }
-.audio-arrow {
+.audio-arrow-outer {
   position: absolute;
   top: 5px;
   right: 5px;
+  z-index: 999999;
+}
+.audio-arrow {
   color: #8b8b8b !important;
   font-size: 14px !important;
 }
@@ -207,7 +317,6 @@ html.light {
   height: 100%;
   display: flex;
   flex-direction: column;
-  /* justify-content: center !important; */
   align-content: center;
   justify-content: flex-end;
   position: relative;
@@ -216,7 +325,7 @@ html.light {
   white-space: nowrap;
   overflow: hidden;
   position: absolute;
-  top: 10px;
+  top: 15px;
   width: 80%;
   box-sizing: border-box;
   margin-left: 50%;
@@ -236,8 +345,8 @@ html.light {
 
 .song-progress-line {
   width: 100%;
-  height: 4px;
-  border-radius: 2px;
+  height: 6px;
+  border-radius: 3px;
   background: #8b8b8b;
   margin: 0 10px;
   margin-top: 1px;
@@ -245,19 +354,19 @@ html.light {
   cursor: pointer;
 }
 .song-progress-active {
-  width: 100px;
+  width: 0%;
   height: 100%;
-  border-radius: 2px;
+  border-radius: 3px;
   background: #3eaf7c;
   position: relative;
   left: 0;
 }
 
 .song-progress-dot {
-  width: 8px;
-  height: 8px;
+  width: 10px;
+  height: 10px;
   background: #3eaf7c;
-  border-radius: 4px;
+  border-radius: 5px;
   position: absolute;
   top: -2px;
   right: -4px;
@@ -293,6 +402,7 @@ html.light {
 .hidden {
   opacity: 0;
   visibility: hidden;
+  z-index: -99999;
 }
 
 .rotate {

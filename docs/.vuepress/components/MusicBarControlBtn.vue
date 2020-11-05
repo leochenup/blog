@@ -1,0 +1,54 @@
+<template>
+  <div class="show-arrow" @click="musicBtnClick">
+    <i class="iconfont icon-musicnote"></i>
+  </div>
+</template>
+
+<script>
+import "./res/fonts/iconfont.css";
+
+export default {
+  data: () => ({
+    isShowMusicBar: false,
+  }),
+  methods: {
+    musicBtnClick() {
+      let musicBar = document.querySelector(".galloping-audio-outer");
+
+      if (
+        !musicBar.classList.contains("hidden") &&
+        !musicBar.classList.contains("show")
+      ) {
+        musicBar.classList.add("show");
+      } else if (musicBar.classList.contains("hidden")) {
+        musicBar.classList.remove("hidden");
+        musicBar.classList.add("show");
+      } else {
+        musicBar.classList.remove("show");
+        musicBar.classList.add("hidden");
+      }
+    },
+  },
+};
+</script>
+
+<style>
+.icon-musicnote {
+  color: #3eaf7c;
+  font-size: 20px;
+}
+.show-arrow {
+  position: fixed;
+  right: 4rem;
+  bottom: 2rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 3px;
+  box-shadow: var(--box-shadow-1);
+  background: var(--background);
+  text-align: center;
+  line-height: 40px;
+  transition: all 0.3s ease-in-out;
+  z-index: 99;
+}
+</style>

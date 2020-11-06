@@ -120,12 +120,12 @@ export default {
   }),
   mounted() {
     this.$audioSource = document.querySelector(".song-souce");
-    this.$audioSource.volume = 0.03;
+    this.$audioSource.volume = 0.03 * 0.5 * 0.5;
     this.$songTtile = document.querySelector(".song-title");
     this.$songImg = document.querySelector(".song-img");
     let volumeActive = document.querySelector(".volume-active");
     let active = document.querySelector(".song-progress-active");
-    volumeActive.style.width = this.$audioSource.volume * 100 + "%";
+    volumeActive.style.width = this.$audioSource.volume * 4 * 100 + "%";
 
     this.$audioSource.addEventListener("ended", () => {
       this.songMsg.isPlay = false;
@@ -255,7 +255,9 @@ export default {
         let percent = parseFloat(
           volumeActiveWidth / volumeBarPositionObj.width
         );
-        document.querySelector(".song-souce").volume = percent;
+        console.log(percent * 0.5 * 0.5);
+
+        document.querySelector(".song-souce").volume = percent * 0.5 * 0.5;
       };
       let mouseup = (e) => {
         document.removeEventListener("mousemove", mousemove);
@@ -282,7 +284,8 @@ export default {
       volumeActive.style.width =
         (volumeActiveWidth / volumeBarPositionObj.width) * 100 + "%";
       let percent = parseFloat(volumeActiveWidth / volumeBarPositionObj.width);
-      document.querySelector(".song-souce").volume = percent;
+      console.log(percent * 0.5 * 0.5);
+      document.querySelector(".song-souce").volume = percent * 0.5 * 0.5;
 
       this.$volumeTimer = setTimeout(() => {
         this.isShowVolumeBar = false;

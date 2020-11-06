@@ -117,6 +117,7 @@ export default {
       },
     ],
     currentSong: 0,
+    isFirst: true,
   }),
   mounted() {
     this.$audioSource = document.querySelector(".song-souce");
@@ -135,11 +136,19 @@ export default {
 
       this.currentSong = (this.currentSong + 1) % this.songList.length;
       this.$audioSource.addEventListener("loadeddata", () => {
-        console.log("加载完成可以播放");
         this.StopSongTitleMove();
         this.songMsg.isPlay = false;
         this.playHandler();
       });
+    });
+
+    this.$audioSource.addEventListener("loadeddata", () => {
+      if (!this.isFirst) {
+        this.StopSongTitleMove();
+        this.songMsg.isPlay = false;
+        this.playHandler();
+      }
+      this.isFirst = false;
     });
   },
   methods: {
@@ -293,6 +302,7 @@ export default {
       }, 2000);
     },
     playMusic() {
+      console.log("播放音乐");
       let progressActive = document.querySelector(".song-progress-active");
       this.$audioSource.play();
       this.$songSourceTimer = setInterval(() => {
@@ -315,7 +325,6 @@ export default {
       clearInterval(this.$songSourceTimer);
     },
     playPreSong() {
-      console.log("播放上一首");
       let active = document.querySelector(".song-progress-active");
 
       this.songMsg.isPlay = false;
@@ -329,9 +338,13 @@ export default {
         currentSong = this.songList.length;
       }
       this.currentSong = (currentSong - 1) % this.songList.length;
+      if (!this.songMsg.isPlay) {
+        this.StopSongTitleMove();
+        this.songMsg.isPlay = false;
+        this.playHandler();
+      }
     },
     playNextSong() {
-      console.log("播放下一首");
       let active = document.querySelector(".song-progress-active");
 
       this.songMsg.isPlay = false;

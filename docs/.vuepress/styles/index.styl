@@ -734,3 +734,37 @@ html.light {
         right: 1.5rem !important;
     }
 }
+
+@media (max-width: 400px) {
+    .song-progress-line {
+        // display: none !important;
+        width: 0 !important;
+        position: relative;
+    }
+
+    .song-progress-active, .song-progress-dot {
+        display: none !important;
+    }
+
+    .song-progress-line::before {
+        content: '/';
+        display: inline-block;
+        position: absolute;
+        top: -7px;
+        left: -4px;
+    }
+
+    .right-bottom-con {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 350px) {
+    .timeStart, .timeEnd {
+        display: none !important;
+    }
+
+    .song-progress-line {
+        display: none !important;
+    }
+}

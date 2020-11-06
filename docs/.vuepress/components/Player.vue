@@ -128,7 +128,6 @@ export default {
     volumeActive.style.width = this.$audioSource.volume * 100 + "%";
 
     this.$audioSource.addEventListener("ended", () => {
-      console.log("播放完毕", this.songMsg.isPlay);
       this.songMsg.isPlay = false;
       this.pauseMusic();
       this.StopSongTitleMove();
@@ -136,7 +135,7 @@ export default {
 
       this.currentSong = (this.currentSong + 1) % this.songList.length;
       this.$audioSource.addEventListener("loadeddata", () => {
-        console.log("可以播放", this.songMsg.isPlay);
+        console.log("加载完成可以播放");
         this.StopSongTitleMove();
         this.songMsg.isPlay = false;
         this.playHandler();
@@ -293,8 +292,34 @@ export default {
       this.$audioSource.pause();
       clearInterval(this.$songSourceTimer);
     },
-    playPreSong() {},
-    playNextSong() {},
+    playPreSong() {
+      console.log("播放上一首");
+      let active = document.querySelector(".song-progress-active");
+
+      this.songMsg.isPlay = false;
+      this.pauseMusic();
+      this.StopSongTitleMove();
+      active.style.width = 0;
+      this.songMsg.currenTime = "00:00";
+
+      let currentSong = this.currentSong;
+      if (this.currentSong === 0) {
+        currentSong = this.songList.length;
+      }
+      this.currentSong = (currentSong - 1) % this.songList.length;
+    },
+    playNextSong() {
+      console.log("播放下一首");
+      let active = document.querySelector(".song-progress-active");
+
+      this.songMsg.isPlay = false;
+      this.pauseMusic();
+      this.StopSongTitleMove();
+      active.style.width = 0;
+      this.songMsg.currenTime = "00:00";
+
+      this.currentSong = (this.currentSong + 1) % this.songList.length;
+    },
   },
 };
 </script>

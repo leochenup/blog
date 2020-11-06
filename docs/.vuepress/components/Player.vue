@@ -160,8 +160,12 @@ export default {
     },
     closeMusicBar(e) {
       let musicBar = document.querySelector(".galloping-audio-outer");
+      let showArrow = document.querySelector(".show-arrow");
       musicBar.classList.remove("show");
       musicBar.classList.add("hidden");
+
+      showArrow.classList.remove("hidden");
+      showArrow.classList.add("show");
     },
     volumeMouseDown() {
       let volumeBar = document.querySelector(".volume-bar-outer");
@@ -273,7 +277,7 @@ html.light {
   visibility: hidden;
   opacity: 0;
   transition: all 0.3s ease-in-out;
-  z-index: 99999;
+  z-index: 8;
 }
 .audio-arrow-outer {
   position: absolute;

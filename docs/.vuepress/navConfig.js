@@ -49,7 +49,6 @@ module.exports = [
             { text: 'MongoDB', link: '/database/mongodb/2020-1-20-mongoDB' },
         ]
     },
-    { text: 'TimeLine', link: '/timeline/', icon: 'reco-date' },
     {
         text: 'Others', icon: 'reco-other',
         items: [
@@ -81,4 +80,5 @@ module.exports = [
             },
         ]
     },
+    { text: 'TimeLine', link: '/timeline/', icon: 'reco-date' },
 ]

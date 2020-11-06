@@ -1,5 +1,5 @@
 <template>
-  <div class="show-arrow" @click="musicBtnClick">
+  <div class="show-arrow hidden" @click="musicBtnClick">
     <i class="iconfont icon-musicnote"></i>
   </div>
 </template>
@@ -9,11 +9,15 @@ import "./res/fonts/iconfont.css";
 
 export default {
   data() {
-    return {};
+    return { isShow: false };
   },
 
   methods: {
     musicBtnClick() {
+      let showArrow = document.querySelector(".show-arrow");
+      showArrow.classList.remove("show");
+      showArrow.classList.add("hidden");
+
       let musicBar = document.querySelector(".galloping-audio-outer");
 
       if (musicBar.classList.contains("hidden")) {
@@ -31,12 +35,12 @@ export default {
 <style>
 .icon-musicnote {
   color: #3eaf7c !important;
-  font-size: 20px;
+  font-size: 26px;
 }
 .show-arrow {
   position: fixed;
-  right: 4rem;
-  bottom: 2rem;
+  right: 1rem;
+  bottom: 4rem;
   width: 40px;
   height: 40px;
   border-radius: 3px;

@@ -27,6 +27,20 @@
       "unicode_decimal": 59897
     },
     {
+      "icon_id": "704656",
+      "name": "skip-next",
+      "font_class": "skipnext",
+      "unicode": "ea9e",
+      "unicode_decimal": 60062
+    },
+    {
+      "icon_id": "704658",
+      "name": "skip-previous",
+      "font_class": "skipprevious",
+      "unicode": "ea9f",
+      "unicode_decimal": 60063
+    },
+    {
       "icon_id": "704967",
       "name": "volume-high",
       "font_class": "volumehigh",

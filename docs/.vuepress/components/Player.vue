@@ -7,15 +7,16 @@
         </div>
         <div class="img-con">
           <img
-            src="./res/song-img.jpg"
+            :src="songList[currentSong].img"
             :class="{ 'song-img': true, rotate: songMsg.isPlay }"
           />
         </div>
         <div class="right-con">
           <div class="song-title-con">
-            <div class="song-title">{{ songMsg.name }}</div>
+            <div class="song-title">{{ songList[currentSong].name }}</div>
           </div>
           <div class="right-bottom-con">
+            <i class="iconfont icon-skipprevious" @click="playPreSong"></i>
             <i
               :class="{
                 iconfont: true,
@@ -24,6 +25,7 @@
               }"
               @click="playHandler"
             ></i>
+            <i class="iconfont icon-skipnext" @click="playNextSong"></i>
             <div class="timeStart">{{ songMsg.currenTime }}</div>
             <div
               class="song-progress-line"
@@ -34,7 +36,7 @@
                 <div class="song-progress-dot"></div>
               </div>
             </div>
-            <div class="timeEnd">{{ songMsg.totalTime }}</div>
+            <div class="timeEnd">{{ songList[currentSong].totalTime }}</div>
             <i class="iconfont icon-volumehigh" @click="volumeCilck"></i>
           </div>
         </div>
@@ -51,13 +53,10 @@
         </div>
       </div>
     </div>
-    <audio
-      class="song-souce"
-      src="https://my-blog-leo.oss-cn-chengdu.aliyuncs.com/AFootprintOfFeelings.mp3"
-      loop
-    ></audio>
+
+    <audio class="song-souce" :src="songList[currentSong].url"></audio>
   </div>
-</template>
+</template >
 
 <script>
 import "./res/fonts/iconfont.css";
@@ -71,6 +70,53 @@ export default {
     },
     isShowVolumeBar: false,
     isShowMusicBar: false,
+    songList: [
+      {
+        url:
+          "https://my-blog-leo.oss-cn-chengdu.aliyuncs.com/%E5%85%B3%E5%A4%A7%E6%B4%B2%20-%20%E9%A3%8E%E5%85%A5%E6%9D%BE.mp3",
+        name: "风入松-(关大洲)",
+        totalTime: "02:45",
+        img:
+          "https://my-blog-leo.oss-cn-chengdu.aliyuncs.com/%E9%A3%8E%E5%85%A5%E6%9D%BE.jpeg",
+      },
+      {
+        url:
+          "https://my-blog-leo.oss-cn-chengdu.aliyuncs.com/%E6%B8%85%E5%B9%B3%E4%B9%90.mp3",
+        name: "清平乐-(关大洲)",
+        totalTime: "02:08",
+        img:
+          "https://my-blog-leo.oss-cn-chengdu.aliyuncs.com/%E6%B8%85%E5%B9%B3%E4%B9%90.jpeg",
+      },
+      {
+        url:
+          "https://my-blog-leo.oss-cn-chengdu.aliyuncs.com/%E9%81%A0%E3%81%8D%E5%91%BC%E3%81%B2%E3%82%99%E5%A3%B0%E3%81%AE%E5%BD%BC%E6%96%B9%E3%81%B8%20%E2%80%93%E2%80%93%E7%9F%A2%E9%87%8E%E7%AB%8B%E7%BE%8E%20%28%E3%82%84%E3%81%AE%20%E3%81%9F%E3%81%A4%E3%81%BF%29.mp3",
+        name: "遠き呼び声の彼方へ-(やの たつみ)",
+        totalTime: "03:43",
+        img: "https://my-blog-leo.oss-cn-chengdu.aliyuncs.com/ligth.jpeg",
+      },
+      {
+        url:
+          "https://my-blog-leo.oss-cn-chengdu.aliyuncs.com/Geoff%20Knorr%20-%20China%20%28The%20Atomic%20Era%29.mp3",
+        name: "Geoff Knorr - China (The Atomic Era)",
+        totalTime: "03:19",
+        img: "https://my-blog-leo.oss-cn-chengdu.aliyuncs.com/China.jpeg",
+      },
+      {
+        url:
+          "https://my-blog-leo.oss-cn-chengdu.aliyuncs.com/rain%20and%20thunder.mp3",
+        name: "Rain And Thunder",
+        totalTime: "02:29",
+        img: "https://my-blog-leo.oss-cn-chengdu.aliyuncs.com/rain.jpeg",
+      },
+      {
+        url:
+          "https://my-blog-leo.oss-cn-chengdu.aliyuncs.com/AFootprintOfFeelings.mp3",
+        name: "A Foot print Of Feelings –– Moonlit Sailor",
+        totalTime: "03:22",
+        img: "https://my-blog-leo.oss-cn-chengdu.aliyuncs.com/afoot.jpg",
+      },
+    ],
+    currentSong: 0,
   }),
   mounted() {
     this.$audioSource = document.querySelector(".song-souce");
@@ -78,7 +124,24 @@ export default {
     this.$songTtile = document.querySelector(".song-title");
     this.$songImg = document.querySelector(".song-img");
     let volumeActive = document.querySelector(".volume-active");
+    let active = document.querySelector(".song-progress-active");
     volumeActive.style.width = this.$audioSource.volume * 100 + "%";
+
+    this.$audioSource.addEventListener("ended", () => {
+      console.log("播放完毕", this.songMsg.isPlay);
+      this.songMsg.isPlay = false;
+      this.pauseMusic();
+      this.StopSongTitleMove();
+      active.style.width = 0;
+
+      this.currentSong = (this.currentSong + 1) % this.songList.length;
+      this.$audioSource.addEventListener("loadeddata", () => {
+        console.log("可以播放", this.songMsg.isPlay);
+        this.StopSongTitleMove();
+        this.songMsg.isPlay = false;
+        this.playHandler();
+      });
+    });
   },
   methods: {
     startSongTitleMove() {
@@ -230,6 +293,8 @@ export default {
       this.$audioSource.pause();
       clearInterval(this.$songSourceTimer);
     },
+    playPreSong() {},
+    playNextSong() {},
   },
 };
 </script>
@@ -249,7 +314,7 @@ html.light {
 
 .timeStart,
 .timeEnd {
-  font-size: 12px;
+  font-size: 14px;
   width: 43px;
 }
 .timeStart {
@@ -258,10 +323,12 @@ html.light {
 .timeEnd {
   margin-right: 5px;
 }
+.icon-skipnext,
+.icon-skipprevious,
 .icon-volumehigh,
 .icon-pause,
 .icon-play {
-  font-size: 20px !important;
+  font-size: 26px !important;
   cursor: pointer !important;
 }
 
@@ -349,7 +416,7 @@ html.light {
   display: flex;
   margin-right: 25px;
   align-items: center;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 .song-progress-line {

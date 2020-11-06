@@ -219,6 +219,12 @@ export default {
     },
     volumeCilck() {
       this.isShowVolumeBar = !this.isShowVolumeBar;
+      if (this.isShowVolumeBar) {
+        this.$volumeTimer = setTimeout(() => {
+          this.isShowVolumeBar = false;
+          clearTimeout(this.$volumeTimer);
+        }, 2000);
+      }
     },
     closeMusicBar(e) {
       let musicBar = document.querySelector(".galloping-audio-outer");
@@ -230,12 +236,14 @@ export default {
       showArrow.classList.add("show");
     },
     volumeMouseDown() {
+      clearTimeout(this.$volumeTimer);
       let volumeBar = document.querySelector(".volume-bar-outer");
       let volumeActive = document.querySelector(".volume-active");
       let volumeBarPositionObj = volumeBar.getBoundingClientRect();
       this.$audioSource = document.querySelector(".song-souce");
 
       let mousemove = (e) => {
+        clearTimeout(this.$volumeTimer);
         let volumeActiveWidth = e.clientX - volumeBarPositionObj.x;
         if (volumeActiveWidth <= 0) {
           volumeActiveWidth = 0;
@@ -251,11 +259,17 @@ export default {
       };
       let mouseup = (e) => {
         document.removeEventListener("mousemove", mousemove);
+        clearTimeout(this.$volumeTimer);
+        this.$volumeTimer = setTimeout(() => {
+          this.isShowVolumeBar = false;
+          clearTimeout(this.$volumeTimer);
+        }, 2000);
       };
       document.addEventListener("mousemove", mousemove);
       document.addEventListener("mouseup", mouseup);
     },
     volumeBarClick(e) {
+      clearTimeout(this.$volumeTimer);
       let volumeBar = document.querySelector(".volume-bar-outer");
       let volumeActive = document.querySelector(".volume-active");
       let volumeBarPositionObj = volumeBar.getBoundingClientRect();
@@ -269,6 +283,11 @@ export default {
         (volumeActiveWidth / volumeBarPositionObj.width) * 100 + "%";
       let percent = parseFloat(volumeActiveWidth / volumeBarPositionObj.width);
       document.querySelector(".song-souce").volume = percent;
+
+      this.$volumeTimer = setTimeout(() => {
+        this.isShowVolumeBar = false;
+        clearTimeout(this.$volumeTimer);
+      }, 2000);
     },
     playMusic() {
       let progressActive = document.querySelector(".song-progress-active");

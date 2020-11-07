@@ -120,10 +120,7 @@ export default {
     isFirst: true,
   }),
   mounted() {
-    if (
-      window.navigator.appVersion.includes("iPad") ||
-      window.navigator.appVersion.includes("iPod")
-    ) {
+    if (window.navigator.appVersion.includes("iPad")) {
       document.querySelectorAll(".line-numbers-wrapper").forEach((item) => {
         item.style.lineHeight = 1.2;
       });

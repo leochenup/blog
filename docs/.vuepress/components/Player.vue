@@ -124,8 +124,8 @@ export default {
       window.navigator.appVersion.includes("iPad") ||
       window.navigator.appVersion.includes("iPod")
     ) {
-      document.querySelectorAll(".line-number").forEach((item) => {
-        item.style.lineHeight = 1;
+      document.querySelectorAll(".line-numbers-wrapper").forEach((item) => {
+        item.style.lineHeight = 1.35;
       });
     }
     this.$audioSource = document.querySelector(".song-souce");

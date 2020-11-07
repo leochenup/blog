@@ -120,7 +120,14 @@ export default {
     isFirst: true,
   }),
   mounted() {
-    alert(window.navigator.appVersion);
+    if (
+      window.navigator.appVersion.includes("iPad") ||
+      window.navigator.appVersion.includes("iPod")
+    ) {
+      document.querySelectorAll(".line-number").forEach((item) => {
+        item.style.lineHeight = 1;
+      });
+    }
     this.$audioSource = document.querySelector(".song-souce");
     this.$audioSource.volume = 0.03 * 0.5 * 0.5;
     this.$songTtile = document.querySelector(".song-title");

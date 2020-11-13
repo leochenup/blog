@@ -73,6 +73,14 @@ export default {
     songList: [
       {
         url:
+          "https://my-blog-leo.oss-cn-chengdu.aliyuncs.com/%E4%B9%9D%E5%B7%9E%E5%90%8C.mp4",
+        name: "九州同 - 阿地力·阿不力孜 / 缪青 / 丁晓逵 / 牛建党",
+        totalTime: "03:15",
+        img:
+          "https://my-blog-leo.oss-cn-chengdu.aliyuncs.com/gjbz.jpg",
+      },
+      {
+        url:
           "https://my-blog-leo.oss-cn-chengdu.aliyuncs.com/%E5%85%B3%E5%A4%A7%E6%B4%B2%20-%20%E9%A3%8E%E5%85%A5%E6%9D%BE.mp3",
         name: "风入松-(关大洲)",
         totalTime: "02:45",

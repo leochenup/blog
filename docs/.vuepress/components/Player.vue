@@ -71,6 +71,22 @@ export default {
     isShowVolumeBar: false,
     isShowMusicBar: false,
     songList: [
+     {
+        url:
+          "https://my-blog-leo.oss-cn-chengdu.aliyuncs.com/%E5%85%B3%E5%A4%A7%E6%B4%B2-%E5%A4%9C%E5%87%89.mp3",
+        name: "关大洲-夜凉",
+        totalTime: "04:52",
+        img:
+          "https://my-blog-leo.oss-cn-chengdu.aliyuncs.com/gjbz.jpg",
+      },
+       {
+        url:
+          "https://my-blog-leo.oss-cn-chengdu.aliyuncs.com/%E5%85%B3%E5%A4%A7%E6%B4%B2-%E6%8A%98%E6%9F%B3.mp3",
+        name: "关大洲-折柳",
+        totalTime: "04:07",
+        img:
+          "https://my-blog-leo.oss-cn-chengdu.aliyuncs.com/gjbz.jpg",
+      },
       {
         url:
           "https://my-blog-leo.oss-cn-chengdu.aliyuncs.com/%E4%B9%9D%E5%B7%9E%E5%90%8C.mp4",

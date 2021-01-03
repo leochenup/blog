@@ -73,6 +73,14 @@ export default {
     songList: [
      {
         url:
+          "https://my-blog-leo.oss-cn-chengdu.aliyuncs.com/%E5%85%B3%E5%A4%A7%E6%B4%B2%20-%20%E5%B0%91%E5%B9%B4%E6%B8%B8.mp3",
+        name: "关大洲 - 少年游",
+        totalTime: "02:53",
+        img:
+          "https://my-blog-leo.oss-cn-chengdu.aliyuncs.com/gjbz.jpg",
+      },
+     {
+        url:
           "https://my-blog-leo.oss-cn-chengdu.aliyuncs.com/%E5%85%B3%E5%A4%A7%E6%B4%B2-%E5%A4%9C%E5%87%89.mp3",
         name: "关大洲-夜凉",
         totalTime: "04:52",

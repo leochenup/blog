@@ -140,13 +140,6 @@ export default {
         totalTime: "02:29",
         img: "https://my-blog-leo.oss-cn-chengdu.aliyuncs.com/rain.jpeg",
       },
-      {
-        url:
-          "https://my-blog-leo.oss-cn-chengdu.aliyuncs.com/AFootprintOfFeelings.mp3",
-        name: "A Foot print Of Feelings –– Moonlit Sailor",
-        totalTime: "03:22",
-        img: "https://my-blog-leo.oss-cn-chengdu.aliyuncs.com/afoot.jpg",
-      },
     ],
     currentSong: 0,
     isFirst: true,

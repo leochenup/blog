@@ -84,8 +84,8 @@ let webappconfig = [
         collapsable: true,
         children: [
             '/frontend/webpack/2020-10-9-开发环境',
-            '/frontend/webpack/2020-10-9-生产环境',
             '/frontend/webpack/2020-10-09-开发环境优化',
+            '/frontend/webpack/2020-10-9-生产环境',
             '/frontend/webpack/2020-10-09-生产环境优化',
             '/frontend/webpack/2020-10-10-webpack详细配置',
             '/frontend/webpack/2020-10-10-webpack5部分内容',

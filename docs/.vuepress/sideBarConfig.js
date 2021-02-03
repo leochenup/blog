@@ -37,13 +37,16 @@ let webappconfig = [
             '/frontend/javascript/2020-9-29-防抖',
             '/frontend/javascript/2020-10-10-Object.defineProperty()',
             '/frontend/javascript/2020-10-10-Symbol',
+            '/frontend/javascript/2021-2-2-js模块化'
         ]
     },
     {
         title: 'TypeScript',
         collapsable: true,
         children: [
-            '/frontend/typescript/2020-10-6-TypeScript声明文件'
+            '/frontend/typescript/2020-10-6-TypeScript声明文件',
+            '/frontend/typescript/2021-2-1-Typescript 编译选项',
+            '/frontend/typescript/2021-2-1-webpack基础环境搭建',
         ]
     },
     {

@@ -23,6 +23,7 @@ npm i -D babel-loader @babel/core @babel/preset-env core-js
 npm i -D html-webpack-plugin clean-webpack-plugin 
 ```
 
+<!-- more -->
 
 
 `babel` 设置兼容后 ie 浏览器任然可能报错，是因为最后打包的 `bundle.js` 包裹函数为箭头函数，ie 不兼容，要通过 `"arrowFunction: flase"` 字段设置禁用箭头函数。

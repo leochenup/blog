@@ -1,6 +1,6 @@
 ---
 title: "React中state和setState"
-date: 2020-03-21
+date: 2021s-03-21
 sidebar: 'auto'
 categories:
 - FrontEnd
@@ -48,6 +48,7 @@ class Counter extends Component {
   }
 }
 ```
+<!-- more -->
 
 得到的输出结果是 `0 0 2 3` 。
 

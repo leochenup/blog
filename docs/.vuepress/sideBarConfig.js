@@ -80,6 +80,9 @@ let webappconfig = [
             '/frontend/react/2020-9-29-React高阶组件renderProps',
             '/frontend/react/2020-9-29-React中antD按需加载',
             '/frontend/react/2020-9-29-React代码分割',
+            '/frontend/react/2021-03-21-React虚拟DOM创建渲染',
+            '/frontend/react/2021-03-21-React中ref原理及实现',
+            '/frontend/react/2021-03-21-React中state和setState',
         ]
     },
     {
@@ -309,6 +312,7 @@ let otherconfig = [
             '/记录/零散笔记/2020-1-28-crud案例知识点总结',
             '/记录/零散笔记/2020-2-22-Git-GitHub',
             '/记录/零散笔记/2020-11-6-百度网盘网页版倍速播放',
+            '/记录/零散笔记/2021-03-21-移动端适配',
         ]
     },
     {

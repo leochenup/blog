@@ -5,7 +5,7 @@ const pluginsConfig = require('./plugins')
 
 module.exports = {
     title: 'Leo`s TechStack',
-    description: '前端 后端 软件开发 ....',
+    description: '前端开发 ....',
     logo: '/img/logo.png',
     markdown: { lineNumbers: true },
     theme: 'reco',

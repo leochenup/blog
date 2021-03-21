@@ -1,5 +1,5 @@
 ---
-title: "vue数据响应式原理"
+title: "vue 数据响应式原理"
 date: 2021-03-21
 sidebar: 'auto'
 categories:
@@ -9,7 +9,7 @@ tags:
 ---
 
 
-# vue数据响应式原理 
+# vue 数据响应式原理 
 
 vue 中实现数据响应式关键是使用了 `Object.defineproperty(obj,key,description)`，设置属性的 `get\ set` 函数来监听数据的获取或变化，来进行相应的处理。如果`set` 的新值与原来的值不同就触发试图跟更新。
 

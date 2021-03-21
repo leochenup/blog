@@ -32,3 +32,4 @@ function createElement(type, config, ...children) {
   
   // .....
   export default { createElement, Component };
+  

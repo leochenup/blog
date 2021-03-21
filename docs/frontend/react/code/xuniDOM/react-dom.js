@@ -62,3 +62,4 @@ function render(vElement, domParent) {
   }
   
   export default { render };
+  

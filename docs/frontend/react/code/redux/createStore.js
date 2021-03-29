@@ -22,7 +22,7 @@ export default function createStore(reducer, initState) {
   function subscribe(func) {
     let isSubscribe = true;
     subscribeFuncs.push(func);
-    return function () {
+    return function() {
       if (isSubscribe) {
         // 返回取消订阅函数
         let index = subscribeFuncs.indexOf(func);

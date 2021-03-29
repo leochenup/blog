@@ -1,5 +1,5 @@
 let bindActionsCreator = (actionsCreator, dispatch) => {
-  return function () {
+  return function() {
     return dispatch(actionsCreator.apply(this, arguments));
   };
 };

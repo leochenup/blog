@@ -77,6 +77,7 @@ let webappconfig = [
       "/frontend/react/2021-03-21-React中ref原理及实现",
       "/frontend/react/2021-03-21-React中state和setState",
       "/frontend/react/2021-03-29-Redux使用及原理",
+      "/frontend/react/2021-03-31-Reac-redux 使用及其原理",
     ],
   },
   {

@@ -78,6 +78,13 @@ let webappconfig = [
       "/frontend/react/2021-03-21-React中state和setState",
       "/frontend/react/2021-03-29-Redux使用及原理",
       "/frontend/react/2021-03-31-Reac-redux 使用及其原理",
+      "/frontend/react/2021-04-11-connected-react-router",
+      "/frontend/react/2021-04-11-React 纯组件",
+      "/frontend/react/2021-04-11-React Hook",
+      "/frontend/react/2021-04-11-React-contex",
+      "/frontend/react/2021-04-11-React-Portals",
+      "/frontend/react/2021-04-11-React-Router",
+      "/frontend/react/2021-04-11-redux-presist",
     ],
   },
   {

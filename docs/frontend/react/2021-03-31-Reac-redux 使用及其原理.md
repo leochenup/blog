@@ -76,15 +76,12 @@ export default connect(mapStateToProps, mapDispatchTProps)(Counter);
   <template slot="code- connect.js">
 ​    <<< @/docs/frontend/react/code/react-redux/connect.js
   </template>
- <template slot="code- index.js">
+  <template slot="code- index.js">
 ​    <<< @/docs/frontend/react/code/react-redux/index.js
   </template>
 </RecoDemo>
 
 
-
-
-## 中间件
 
 
 

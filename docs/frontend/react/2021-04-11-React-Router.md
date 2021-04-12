@@ -94,7 +94,7 @@ window.location.hash // => #/user
 
 案例效果如下：
 
-<video src="https://my-blog-leo.oss-cn-chengdu.aliyuncs.com/react-router.mov" controls="controls">
+<video style="width:100%" src="https://my-blog-leo.oss-cn-chengdu.aliyuncs.com/react-router.mov" controls="controls">
 您的浏览器不支持 video 标签。
 </video>
 

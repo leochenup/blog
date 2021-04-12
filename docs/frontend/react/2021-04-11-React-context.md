@@ -22,7 +22,7 @@ tags:
 父组件中首先设置 `childContextTypes` 设置向下传递的数据的数据类型 ，然后设置`getChildContext` 传递数据的实体。
 
 在子组件中设置 `contextTypes` 接受传来的数据。使用 `this.context` 来访问。
-
+<!-- more -->
 ```js
 // 父组件
 static childContextTypes = {

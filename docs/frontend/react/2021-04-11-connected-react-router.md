@@ -15,7 +15,7 @@ tags:
 > *  *connected-react-router* 这个库帮我们实现了在 redux 中操作路由方法,并将路由变化的信息同步在 redux 的 store 中。
 > *  dispatch 派发 可以带有路由跳转的类型的 action ，派发后由routerMiddleware中间件拦截进行跳转。
 > *  路径改变的时候 ，可以把当前的路径信息（location）存放到仓库中，router属性里
-
+<!-- more -->
 ## 使用步骤
 
 创建 `hitory` 共享同一个 `history`

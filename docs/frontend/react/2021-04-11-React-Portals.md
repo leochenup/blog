@@ -19,6 +19,8 @@ tags:
 
 `id` 为 `modal-root` 的 `div`，为全局提示组件的容器，在根组件 `root` 之外。
 
+<!-- more -->
+
 ```html
 <body>
   <div id="root"></div>

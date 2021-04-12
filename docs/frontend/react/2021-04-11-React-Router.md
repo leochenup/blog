@@ -44,7 +44,7 @@ window.location.hash // => #/user
 
 下面是 `History` 的属性及方法：
 
-![](https://my-blog-leo.oss-cn-chengdu.aliyuncs.com/history.png)
+<img src="https://my-blog-leo.oss-cn-chengdu.aliyuncs.com/history.png" />
 
 使用浏览器提供的 ` window.onpopstate` 监听函数每当路径从路径栈中弹出就执行，并从回调函数中得到 `PopStateEvent` 事件对象，从中可以拿到调用 `pushState`  函数时传递的 `state`。可以通过此控制界面的切换显示。
 
@@ -144,7 +144,7 @@ window.location.hash // => #/user
 
 路由组建被传入的参数如下：
 
-![](https://my-blog-leo.oss-cn-chengdu.aliyuncs.com/router-component.png)
+<img src="https://my-blog-leo.oss-cn-chengdu.aliyuncs.com/router-component.png" />
 
 
 

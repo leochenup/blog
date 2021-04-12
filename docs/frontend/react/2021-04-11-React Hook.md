@@ -589,7 +589,7 @@ ReactDOM.render(<Counter1 />, document.getElementById("root"));
 * 对渲染树的各个节点计算布局，比如 box 的位置尺寸。
 * 根据 render tree 并利用浏览器的 UI 层进行绘制。
 
-![](https://my-blog-leo.oss-cn-chengdu.aliyuncs.com/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%B8%B2%E6%9F%93%E6%B5%81%E7%A8%8B2.png)
+<img src="https://my-blog-leo.oss-cn-chengdu.aliyuncs.com/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%B8%B2%E6%9F%93%E6%B5%81%E7%A8%8B2.png" />
 
 
 

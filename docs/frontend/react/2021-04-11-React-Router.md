@@ -105,7 +105,9 @@ window.location.hash // => #/user
 案例实现如下
 
 <RecoDemo :collapse="true">
-
+  <template slot="code- Index.js">
+​    <<< @/docs/frontend/react/code/react-router-dom/components/index.js
+  </template>
   <template slot="code- Home.js">
 ​    <<< @/docs/frontend/react/code/react-router-dom/components/home.jsx
   </template>

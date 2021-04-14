@@ -32,7 +32,7 @@ let webappconfig = [
       "/frontend/javascript/2020-10-10-Symbol",
       "/frontend/javascript/2021-2-2-js模块化",
       "/frontend/javascript/2021-3-23-Promise与异步处理",
-     ' /frontend/javascript/2021-04-14-防抖节流'
+      "/frontend/javascript/2021-04-14-防抖节流",
     ],
   },
   {

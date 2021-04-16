@@ -58,6 +58,10 @@ let webappconfig = [
       "/frontend/vue/2020-5-31-vue组件化",
       "/frontend/vue/2020-5-31-vue接口调用",
       "/frontend/vue/2021-03-21-vue数据响应式原理observer",
+      "/frontend/vue/2021-04-16-Vue 混入",
+      "/frontend/vue/2021-04-16-vuex 使用",
+      "/frontend/vue/2021-04-16-vuex 原理",
+      
     ],
   },
   {

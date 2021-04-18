@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { RouteContext } from "./context";
 
-export default class HashRouter extends Component {
+export default class BrowserRouter extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -15,7 +15,6 @@ export default class HashRouter extends Component {
   }
   componentDidMount() {
     window.onpopstate = (e) => {
-      console.log(e);
       if (this.blockMessage) {
         let confirm = window.confirm(
           this.blockMessage({ pathname: this.state.location.pathname })

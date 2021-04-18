@@ -33,6 +33,11 @@ let webappconfig = [
       "/frontend/javascript/2021-2-2-js模块化",
       "/frontend/javascript/2021-3-23-Promise与异步处理",
       "/frontend/javascript/2021-04-14-防抖节流",
+      "/frontend/javascript/2021-04-18-Generator",
+      "/frontend/javascript/2021-04-18-js 检测数据类型",
+      "/frontend/javascript/2021-04-18-JS 深拷贝浅拷贝",
+      "/frontend/javascript/2021-04-18-JS 数组去重",
+      "/frontend/javascript/2021-04-18-JS new的模拟实现",
     ],
   },
   {
@@ -61,7 +66,7 @@ let webappconfig = [
       "/frontend/vue/2021-04-16-Vue 混入",
       "/frontend/vue/2021-04-16-vuex 使用",
       "/frontend/vue/2021-04-16-vuex 原理",
-      
+      "/frontend/vue/2021-04-17-Vue 源码解析之模板引擎 mustache 原理"
     ],
   },
   {
@@ -287,7 +292,7 @@ let otherconfig = [
       "/记录/零散笔记/2020-2-22-Git-GitHub",
       "/记录/零散笔记/2020-11-6-百度网盘网页版倍速播放",
       "/记录/零散笔记/2021-03-21-移动端适配",
-      "/记录/零散笔记/2021-04-17-模板引擎 mustache 原理"
+      "/记录/零散笔记/2021-04-18-websocket"
     ],
   },
   {

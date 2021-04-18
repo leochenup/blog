@@ -39,4 +39,9 @@ module.exports = [
         desc: 'Reach Router is a small, simple router for React that borrows from React Router, Ember, and Preact Router. Reach Router has a small footprint, supports only simple route patterns by design, and has strong (but experimental) accessibility features.',
         link: 'https://reach.tech/router/'
     },
+    {
+        title: '冴羽 segmentfault',
+        desc: '冴羽的JavaScript博客',
+        link: 'https://segmentfault.com/u/yayu/articles?page=1'
+    },
 ]

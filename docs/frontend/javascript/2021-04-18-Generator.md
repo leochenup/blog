@@ -39,6 +39,8 @@ console.log(g.next())   // {value: 3, done: true}
 console.log(g.next())   // {value: undefined, done: true}
 ```
 
+<!-- more -->
+
  每次调用 `next()` 方法，内部指针就从函数头部或上一次停下来的地方开始执行，直到遇到下一个 `yield` 表达式（或 `return` 语句）为止。换言之，Generator 函数是分段执行的，`yield` 表达式是暂停执行的标记，而 `next()` 方法可以恢复执行。
  调用 Generator 函数，返回一个遍历器对象 Iterator，代表 Generator 函数的内部指针。每次调用遍历器对象的 `next()` 方法，就会返回一个有着 `value` 和 `done` 两个属性的对象。`value` 属性表示当前的内部状态的值，是 `yield` 表达式后面那个表达式的值；`done` 属性是一个布尔值，表示是否遍历结束。
  Generator 函数的暂停执行的效果，意味着可以把异步操作写在 `yield` 语句里面，等到调用 `next` 方法时再往后执行。这实际上等同于不需要写回调函数了，因为异步操作的后续操作可以放在 `yield` 语句下面，反正要等到调用 `next()` 方法时再执行。所以，Generator 函数的一个重要实际意义就是用来处理异步操作，改写回调函数。

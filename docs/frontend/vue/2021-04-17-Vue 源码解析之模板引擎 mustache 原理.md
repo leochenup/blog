@@ -88,3 +88,20 @@ let data = {
 
 ## 实现原理
 
+<RecoDemo :collapse="true">
+  <template slot="code- index.js">
+​    <<< @/docs/frontend/vue/code/mustache/index.js
+  </template>
+  <template slot="code- nestTokens.js">
+​    <<< @/docs/frontend/vue/code/mustache/nestTokens.js
+  </template>
+  <template slot="code- parseTemplateToTokens.js">
+​    <<< @/docs/frontend/vue/code/mustache/parseTemplateToTokens.js
+  </template>
+  <template slot="code- renderTemplate.js">
+​    <<< @/docs/frontend/vue/code/mustache/renderTemplate.js
+  </template>
+  <template slot="code- Scanner.js">
+​    <<< @/docs/frontend/vue/code/mustache/Scanner.js
+  </template> 
+</RecoDemo>
